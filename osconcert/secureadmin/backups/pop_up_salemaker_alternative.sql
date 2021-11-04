@@ -1,0 +1,4 @@
+TRUNCATE TABLE `salemaker_sales`;
+
+INSERT INTO `salemaker_sales` (`sale_id`, `sale_status`, `sale_name`, `sale_deduction_value`, `sale_deduction_type`, `sale_pricerange_from`, `sale_pricerange_to`, `sale_specials_condition`, `sale_categories_selected`, `sale_categories_all`, `sale_date_start`, `sale_date_end`, `sale_date_added`, `sale_date_last_modified`, `sale_date_status_change`, `sale_discount_type`, `choice_text`, `choice_warning`, `sale_products_selected`, `apply_to_cross_sale`) VALUES
+(1, 1, 'Popup', '0.0000', 0, '0.0000', '0.0000', 0, '', '', '0000-00-00', '0000-00-00', '2019-01-28', '0000-00-00', '0000-00-00', 'C', 'ADD to cart', 'Cick Add to Cart button if you want to reserve this space', '', 'N');
