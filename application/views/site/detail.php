@@ -253,7 +253,7 @@
 							</div>
 							<br><br>
 							<div class="clearfix">
-            					<a class="comments-btn btn btn-primary" href="https://scottnnaghor.com/jollof_n_laugh/osconcert/index.php?cPath=1">Book Event</a>
+            					<a class="comments-btn btn btn-primary" href="#">Book Event</a>
             				</div>
 							<!-- entry content end-->
 						</div>
@@ -315,7 +315,7 @@
 							</a>
 						</div>
 						<div class="post-content">
-							<a class="post-cat" href="https://scottnnaghor.com/jollof_n_laugh/osconcert/index.php?cPath=1" target="_blank">Book</a>
+							<a class="post-cat" href="#">Book</a>
 							<h3 class="post-title">
 								<a href="#"><?php echo $det->req_age; ?></a>
 							</h3>
@@ -337,7 +337,7 @@
 							</a>
 						</div>
 						<div class="post-content">
-							<a class="post-cat" href="https://scottnnaghor.com/jollof_n_laugh/osconcert/index.php?cPath=1" target="_blank">Book</a>
+							<a class="post-cat" href="#">Book</a>
 							<h3 class="post-title">
 								<a href="#"><?php echo $det->req_dress_code; ?></a>
 							</h3>
