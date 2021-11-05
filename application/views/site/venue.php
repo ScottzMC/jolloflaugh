@@ -123,7 +123,7 @@
 								<?php echo $ven->body; ?>
 							</div>
 							<div class="clearfix">
-            					<a class="comments-btn btn btn-primary" href="#">Book Event</a>
+            					<a class="comments-btn btn btn-primary" href="https://shoobs.com/events/62346/jollof-n-laugh">Book Event</a>
             				</div>
 							<!-- entry content end-->
 						</div>
@@ -162,7 +162,7 @@
 							<h3 class="widget-title">Book</h3>
 							<!-- ts-overlay-style  end-->
                             <div class="clearfix">
-								<a class="comments-btn btn btn-primary" href="#">Book</a>
+								<a class="comments-btn btn btn-primary" href="https://shoobs.com/events/62346/jollof-n-laugh">Book</a>
 							</div>
 						</div>
 					</div>
