@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'https://scottnnaghor.com/jollof_n_laugh/';
+$config['base_url'] = 'https://jollofnlaugh.com/';
 
 $config['google_key'] = '6Lej3hMdAAAAAAKPN3xm_hQql0T1mfWlfVPpMPiH';
 $config['google_secret'] = '6Lej3hMdAAAAAI0hdQvu8nnJgEWwGaSY_1f-IhDw';
