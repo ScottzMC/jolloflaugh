@@ -39,7 +39,7 @@
 	<link rel="stylesheet" href="<?php echo base_url('css/magnific-popup.css'); ?>">
 
 	<!-- Style -->
-	<link rel="stylesheet" href="<?php echo base_url('css/style.css'); ?>">
+	<link rel="stylesheet" href="<?php echo base_url('css/main.css'); ?>">
 	<!-- Style -->
 	<link rel="stylesheet" href="<?php echo base_url('css/colors/color-13.css'); ?>">
 
@@ -66,11 +66,17 @@
        /* Smartphone Portrait and Landscape */
        @media only screen and (min-device-width : 320px) and (max-device-width : 480px){  
         .mobileHide { display: none;}
-        .item{ height: 350px;}
+        .item{ 
+          height: 35vh !important;
+          min-height: unset !important;
+          width: auto !important;
+          min-width: unset !important;
+        }
+        .post-title{ font-size: 14px; }
        }
     </style>
 	
-	<!-- block wrapper start-->
+	<!-- block wrapper start -->
 	<section class="block-wrapper p-30 section-bg">
 		<div class="container">
 			<div class="row">
@@ -78,7 +84,10 @@
 					<div class="ts-overlay-style featured-post owl-carousel" id="featured-slider-5">
 						<?php if(!empty($slider)){ foreach($slider as $slid){ ?>
 						<!-- item -->
-						<div class="item" style="background-image:url(uploads/slider/<?php echo $slid->image; ?>); background-size: 100% 100%; height: 600px;">
+						<div class="item" style="height: 600px; background-image:url(uploads/slider/<?php echo $slid->image; ?>); background-size: 100% 100%; background-repeat: no-repeat;
+						background-position: center;">
+						<!-- <div class="item" style="height: 600px; background-image:url(uploads/slider/<?php echo $slid->image; ?>); background-size: cover; background-repeat: no-repeat;
+                        background-position: center; " -->
 							<div class="overlay-post-content">
 								<div class="post-content">
 									<h2 class="post-title lg">
@@ -88,10 +97,10 @@
 							</div>
 							<!--/ Featured post end -->
 						</div>
-						<!-- item end-->
+						<!-- item end -->
                         <?php } } ?>
 					</div>
-					<!-- ts overlay style end-->
+					<!-- ts overlay style end -->
 				</div>
 			</div>
 		</div>
@@ -251,12 +260,12 @@
 			<div class="ts-grid-box ts-grid-box-heighlight">
 				<h2 class="ts-title">Eat-Laugh-Dance</h2>
 
-				<div class="owl-carousel" id="more-news-slider">
+				<div class="owl-carousel" id="more-news-slider" style="height: 300px;">
 				    <?php foreach($eat_laugh as $eat){ ?>
 					<!-- ts-overlay-style end-->
 					<div class="ts-overlay-style">
 					    <!-- item -->
-						<div class="item">
+						<div class="item" style="height: 300px;">
 							<div class="ts-post-thumb">
 								<a href="<?php echo site_url('event/detail'); ?>">
 									<img class="img-fluid" src="<?php echo base_url('uploads/banner/'.$eat->image); ?>" alt="<?php echo $eat->title; ?>">

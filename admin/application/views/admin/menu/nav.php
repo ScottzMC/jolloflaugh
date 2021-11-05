@@ -66,7 +66,7 @@
             <div class="deznav-scroll">
 				<ul class="metismenu" id="menu">
                     <li>
-                        <a href="https://scottnnaghor.com/ticket_event/jollof_n_laugh/home" target="_blank" aria-expanded="false">
+                        <a href="https://scottnnaghor.com/jollof_n_laugh/home" target="_blank" aria-expanded="false">
 							<i class="flaticon-381-networking"></i>
 							<span class="nav-text">Back to Website</span>
 						</a>

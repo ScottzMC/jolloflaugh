@@ -28,12 +28,12 @@
                       window.location.href="<?php echo site_url('dashboard'); ?>";
                   </script> 
                   <?php
-              }else{
-                $statusMsg = '<span style="color: white;">Wrong Email-ID or Password!</span>';
-                $this->session->set_flashdata('msgError', $statusMsg);
-                
-                $this->load->view('admin/account/login');
-               }
+              }else{ ?>
+                <script>
+                      alert('Login failed');
+                      window.location.href="<?php echo site_url('account/login'); ?>";
+                  </script> 
+               <?}
             }
         }
         

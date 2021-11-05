@@ -899,16 +899,16 @@ $purge_query = tep_db_query("select * from " . TABLE_SESSIONS . " where expiry <
 					$titlePrice='' . SOLD . '';
 				}
 				//check something
-				if(TEST_MODE=='true'){
-					if ( $seat['products_ordered'] == 0 && $seat['products_status'] ==0) 
-					{ 
-						$titlePrice = ''  . NO_ORDER . '';
-					}
-					if ( $seat['products_ordered'] > 0 && $seat['product_type'] =='P') 
-					{ 
-						$titlePrice = ''  . NO_ORDER . '';
-					}
-				}
+				// if(TEST_MODE=='true'){
+					// if ( $seat['products_ordered'] == 0 && $seat['products_status'] ==0) 
+					// { 
+						// $titlePrice = ''  . NO_ORDER . '';
+					// }
+					// if ( $seat['products_ordered'] > 0 && $seat['product_type'] =='P') 
+					// { 
+						// $titlePrice = ''  . NO_ORDER . '';
+					// }
+				// }
 
 				switch ($seat['html']) 
 				{	
@@ -991,10 +991,10 @@ $purge_query = tep_db_query("select * from " . TABLE_SESSIONS . " where expiry <
 						{
 						$title='title="' . $seat['products_name'] . " - " . $titlePrice . '"';
 						}
-						if ( $seat['products_ordered'] > 0 && $seat['product_type'] =='P') 
-						{ 
-						$title = 'title="'  . NO_ORDER . '"';
-						}
+						// if ( $seat['products_ordered'] > 1 && $seat['product_type'] =='P') 
+						// { 
+						// $title = 'title="'  . NO_ORDER . '"';
+						// }
 						// available seats 
 						$html .= '<li '. $indiv_css . $size_css . $trans_css .' class="s '.$extraClass . $this->color2class($seat['color_code']) . '" id="s' . $seat['products_id'] . '" data-rel="'.$products_original_price.'" '.$title.'>' . $seat['products_number'] . "</li>";	
 						break;
