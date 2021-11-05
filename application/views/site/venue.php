@@ -123,7 +123,7 @@
 								<?php echo $ven->body; ?>
 							</div>
 							<div class="clearfix">
-            					<a class="comments-btn btn btn-primary" href="https://shoobs.com/events/62346/jollof-n-laugh">Book Event</a>
+            					<a class="btn btn-primary" href="https://shoobs.com/events/62346/jollof-n-laugh">Book Event</a>
             				</div>
 							<!-- entry content end-->
 						</div>
