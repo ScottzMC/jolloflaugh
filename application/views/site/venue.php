@@ -162,7 +162,7 @@
 							<h3 class="widget-title">Book</h3>
 							<!-- ts-overlay-style  end-->
                             <div class="clearfix">
-								<a class="comments-btn btn btn-primary" href="https://scottnnaghor.com/jollof_n_laugh/osconcert/index.php?cPath=1">Book</a>
+								<a class="comments-btn btn btn-primary" href="#">Book</a>
 							</div>
 						</div>
 					</div>
