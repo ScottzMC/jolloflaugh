@@ -170,7 +170,8 @@
 				<div class="col-lg-3 col-md-6">
 					<div class="ts-grid-box ts-grid-content border-style">
 						<div class="post-content">
-							<a class="post-cat" href="https://scottnnaghor.com/jollof_n_laugh/osconcert/index.php?cPath=1" target="_blank">Book</a>
+							<a class="post-cat" href="#" target="_blank">Book</a>
+							<!--<a class="post-cat" href="https://scottnnaghor.com/jollof_n_laugh/osconcert/index.php?cPath=1" target="_blank">Book</a>-->
 							<h3 class="post-title">
 								<a href="#"><?php echo $det->req_age; ?></a>
 							</h3>
@@ -187,7 +188,7 @@
 				<div class="col-lg-3 col-md-6">
 					<div class="ts-grid-box ts-grid-content border-style">
 						<div class="post-content">
-							<a class="post-cat" href="https://scottnnaghor.com/jollof_n_laugh/osconcert/index.php?cPath=1" target="_blank">Book</a>
+							<a class="post-cat" href="#" target="_blank">Book</a>
 							<h3 class="post-title">
 								<a href="#"><?php echo $det->req_dress_code; ?></a>
 							</h3>
@@ -204,7 +205,7 @@
 				<div class="col-lg-3 col-md-6">
 					<div class="ts-grid-box ts-grid-content border-style">
 						<div class="post-content">
-							<a class="post-cat" href="https://scottnnaghor.com/jollof_n_laugh/osconcert/index.php?cPath=1" target="_blank">Book</a>
+							<a class="post-cat" href="#" target="_blank">Book</a>
 							<h3 class="post-title">
 								<a href="#"><?php echo $det->req_last_entry; ?></a>
 							</h3>
@@ -221,7 +222,7 @@
 				<div class="col-lg-3 col-md-6">
 					<div class="ts-grid-box ts-grid-content border-style">
 						<div class="post-content">
-							<a class="post-cat" href="https://scottnnaghor.com/jollof_n_laugh/osconcert/index.php?cPath=1" target="_blank">Book</a>
+							<a class="post-cat" href="#" target="_blank">Book</a>
 							<h3 class="post-title">
 								<a href="#"><?php echo $det->req_id; ?></a>
 							</h3>
@@ -359,7 +360,7 @@
 							</a>
 						</div>
 						<div class="post-content">
-							<a class="post-cat" href="https://scottnnaghor.com/jollof_n_laugh/osconcert/index.php?cPath=1" target="_blank">Book</a>
+							<a class="post-cat" href="#" target="_blank">Book</a>
 							<h3 class="post-title">
 								<a href="#"><?php echo $det->req_last_entry; ?></a>
 							</h3>
@@ -381,7 +382,7 @@
 							</a>
 						</div>
 						<div class="post-content">
-							<a class="post-cat" href="https://scottnnaghor.com/jollof_n_laugh/osconcert/index.php?cPath=1" target="_blank">Book</a>
+							<a class="post-cat" href="#" target="_blank">Book</a>
 							<h3 class="post-title">
 								<a href="#"><?php echo $det->req_id; ?></a>
 							</h3>
