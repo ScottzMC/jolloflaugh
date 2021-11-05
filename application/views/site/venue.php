@@ -159,7 +159,7 @@
 
 					<div class="comments-form ts-grid-box">
 						<div class="widgets ts-grid-box post-tab-list ts-col-box">
-							<h3 class="widget-title">Book</h3>
+							<h3>Book</h3>
 							<!-- ts-overlay-style  end-->
                             <div class="clearfix">
 								<a class="comments-btn btn btn-primary" href="https://shoobs.com/events/62346/jollof-n-laugh">Book</a>
