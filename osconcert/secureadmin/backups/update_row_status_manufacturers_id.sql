@@ -1,4 +1,0 @@
-UPDATE products 
-SET products.manufacturers_id=(SELECT products_to_categories.categories_id
-FROM products_to_categories
-WHERE products.products_id=products_to_categories.products_id);
