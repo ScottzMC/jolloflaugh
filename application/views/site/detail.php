@@ -11,7 +11,7 @@
 
 	<!-- Site Title- -->
 	<?php foreach($detail as $det){} ?>
-	<title><?php echo $det->title; ?> || Ticket Event</title>
+	<title><?php echo $det->title; ?> || Jollof N Laugh</title>
 
 	<!-- CSS
    ==================================================== -->
