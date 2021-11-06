@@ -10,7 +10,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<!-- Site Title- -->
-	<title>Forgot Password || Ticket Event</title>
+	<title>Forgot Password || Jollof N Laugh</title>
 
 	<!-- CSS
    ==================================================== -->
