@@ -122,7 +122,7 @@
 							<div class="entry-content" style="color: #000;">
 								<?php echo $ven->body; ?>
 							</div>
-							<div class="clearfix">
+							<div class="">
             					<a class="btn btn-primary" href="https://shoobs.com/events/62346/jollof-n-laugh">Book Event</a>
             				</div>
 							<!-- entry content end-->
