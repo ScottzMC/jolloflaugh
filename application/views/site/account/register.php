@@ -10,7 +10,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<!-- Site Title- -->
-	<title>Create an Account || Ticket Event</title>
+	<title>Create an Account || Jollof N Laugh</title>
 
 	<!-- CSS
    ==================================================== -->
