@@ -10,7 +10,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<!-- Site Title- -->
-	<title>Welcome to Ticket Event Platform</title>
+	<title>Welcome to Jollof N Laugh</title>
 
 	<!-- CSS
    ==================================================== -->
