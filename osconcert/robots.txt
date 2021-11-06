@@ -1,0 +1,13 @@
+user-agent: *
+   disallow: /cgi-bin/
+   disallow: /docs/
+   disallow: /download/
+   disallow: /barcode/
+   disallow: /cache/
+   disallow: /phpinfo/
+   disallow: /tfpdf/
+   disallow: /includes/
+   disallow: /admin/
+   disallow: /sfx/
+   disallow: /ext/
+

@@ -1,0 +1,438 @@
+/**
+* Template Name: TheEvent - v4.3.0
+* Template URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  background: #fff;
+  color: #2f3138;
+}
+
+a {
+  color: #f82249;
+}
+
+a:hover, a:active, a:focus {
+  color: #f8234a;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #0e1b4d;
+}
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  background: #f82249;
+}
+
+.back-to-top i {
+  color: #fff;
+}
+
+.back-to-top:hover {
+  background: #f94a6a;
+  color: #fff;
+}
+
+/* Sections Header
+--------------------------------*/
+
+.section-header::before {
+  background: #f82249;
+}
+
+
+.section-header p {
+  font-weight: 500;
+  color: #9195a2;
+}
+
+.section-with-bg {
+  background-color: #f6f7fd;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  background: rgba(6, 12, 34, 0.98);
+}
+
+#header.header-scrolled, #header.header-inner {
+  background: rgba(6, 12, 34, 0.98);
+}
+
+#header #logo h1 span {
+  color: #f82249;
+}
+
+#header #logo h1 a, #header #logo h1 a:hover {
+  color: #fff;
+}
+
+
+/*--------------------------------------------------------------
+# Buy Tickets
+--------------------------------------------------------------*/
+.buy-tickets {
+  color: #fff;
+  background: #f82249;
+}
+
+.buy-tickets:hover {
+  background: none;
+  color: #fff;
+}
+
+.buy-tickets:focus {
+  color: #fff;
+}
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/**
+* Desktop Navigation 
+*/
+
+.navbar > ul > li > a:before {
+  background-color: #f82249;
+}
+
+.navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
+  color: #fff;
+}
+
+.navbar .dropdown ul {
+  background: #fff;
+}
+
+.navbar .dropdown ul a {
+  color: #060c22;
+}
+
+.navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
+  color: #f82249;
+}
+
+/**
+* Mobile Navigation 
+*/
+.mobile-nav-toggle {
+  color: #fff;
+}
+
+.navbar-mobile {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.navbar-mobile ul {
+  background-color: #fff;
+}
+
+
+.navbar-mobile a {
+  color: #060c22;
+}
+
+.navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
+  color: #f82249;
+}
+
+.navbar-mobile .dropdown ul {
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+
+#hero:before {
+  background: rgba(6, 12, 34, 0.8);
+}
+#hero h1 span {
+  color: #f82249;
+}
+
+#hero p {
+  color: #ebebeb;
+}
+
+#hero .play-btn {
+  background: radial-gradient(#f82249 50%, rgba(101, 111, 150, 0.15) 52%);
+}
+
+#hero .play-btn:before {
+  border: 2px solid rgba(163, 163, 163, 0.4);
+  background: rgba(198, 16, 0, 0);
+}
+
+#hero .play-btn:hover::after {
+  border-left: 15px solid #f82249;
+}
+
+#hero .play-btn:hover::before {
+  border-left: 15px solid #fff;
+}
+
+#hero .about-btn:hover {
+  background: #f82249;
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+
+#about h2 {
+  color: #fff;
+}
+
+#about h3 {
+  color: #fff;
+}
+
+#about p {
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Speakers Section
+--------------------------------------------------------------*/
+
+#speakers .speaker .details {
+  background: rgba(6, 12, 34, 0.76);
+}
+
+#speakers .speaker .details h3 {
+  color: #fff;
+}
+
+#speakers .speaker .details p {
+  color: #fff;
+}
+#speakers .speaker .details a {
+  color: #fff;
+}
+
+#speakers .speaker .details a:hover {
+  color: #f82249;
+}
+#speakers-details .details h2 {
+  color: #112363;
+}
+#speakers-details .details .social a {
+  background: #e9edfb;
+  color: #112363;
+}
+
+#speakers-details .details .social a:hover {
+  background: #f82249;
+  color: #fff;
+}
+#speakers-details .details p {
+  color: #112363;
+}
+
+/*--------------------------------------------------------------
+# Schedule Section
+--------------------------------------------------------------*/
+#schedule .nav-tabs a {
+  background-color: #0e1b4d;
+}
+#schedule .nav-tabs a.active {
+  background-color: #f82249;
+  color: #fff;
+}
+#schedule .schedule-item {
+  border-bottom: 1px solid #cad4f6;
+}
+
+#schedule .schedule-item:hover {
+  background-color: #fff;
+}
+
+#schedule .schedule-item h4 span {
+  color: #19328e;
+}
+
+#schedule .schedule-item p {
+  color: #152b79;
+}
+
+/*--------------------------------------------------------------
+# Venue Section
+--------------------------------------------------------------*/
+#venue .venue-info:before {
+  background: rgba(13, 20, 41, 0.8);
+}
+
+#venue .venue-info h3 {
+  color: #fff;
+}
+
+#venue .venue-info p {
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Gallery Section
+--------------------------------------------------------------*/
+#gallery .swiper-pagination .swiper-pagination-bullet {
+  background-color: #fff;
+}
+
+#gallery .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #f82249;
+}
+
+  #gallery .swiper-slide-active {
+
+    background: #fff;
+  }
+}
+
+/*--------------------------------------------------------------
+# Sponsors Section
+--------------------------------------------------------------*/
+
+
+#supporters .supporter-logo {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/*--------------------------------------------------------------
+# F.A.Q Section
+--------------------------------------------------------------*/
+
+#faq .faq-list .question {
+  color: #e0072f;
+}
+
+#faq .faq-list .collapsed {
+  color: black;
+}
+
+#faq .faq-list .collapsed:hover {
+  color: #f82249;
+}
+
+/*--------------------------------------------------------------
+# Subscribe Section
+--------------------------------------------------------------*/
+
+
+#subscribe:before {
+  background: rgba(6, 12, 34, 0.6);
+}
+
+#subscribe .section-header h2, #subscribe p {
+  color: #fff;
+}
+
+#subscribe input {
+  background: #fff;
+  color: #060c22;
+}
+
+#subscribe button {
+  background: #f82249;
+  color: #fff;
+}
+
+#subscribe button:hover {
+  background: #e0072f;
+}
+
+/*--------------------------------------------------------------
+# Buy Tickets Section
+--------------------------------------------------------------*/
+
+#buy-tickets .card .btn {
+  background-color: #f82249;
+  color: #fff;
+}
+
+#buy-tickets .card .btn:hover {
+  background-color: #e0072f;
+}
+#buy-tickets #buy-ticket-modal .btn {
+  background-color: #f82249;
+  color: #fff;
+}
+
+#buy-tickets #buy-ticket-modal .btn:hover {
+  background-color: #e0072f;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  background: #101522;
+  color: #eee;
+}
+
+#footer .footer-top {
+  background: #040919;
+}
+#footer .footer-top .footer-info h3 {
+  color: #fff;
+}
+
+#footer .footer-top .footer-info p {
+  color: #fff;
+}
+
+#footer .footer-top .social-links a {
+  background: #222636;
+  color: #eee;
+}
+
+#footer .footer-top .social-links a:hover {
+  background: #f82249;
+  color: #fff;
+}
+
+#footer .footer-top h4 {
+  color: #fff;
+}
+
+#footer .footer-top .footer-links ul i {
+  color: #f82249;
+}
+
+#footer .footer-top .footer-links ul a {
+  color: #eee;
+}
+
+#footer .footer-top .footer-links ul a:hover {
+  color: #f82249;
+}
+
+#footer .footer-top .footer-newsletter input[type="submit"] {
+  background: #f82249;
+}
+
+#footer .footer-top .footer-newsletter input[type="submit"]:hover {
+  background: #e0072f;
+}
+#footer .credits {
+  color: #ddd;
+}
+ .btn-primary {
+     background: #f82249;
+     border: 2px solid #000;
+	 margin:5px;
+}
+ .btn-primary:hover {
+     background: none;
+     color: #000;
+}
