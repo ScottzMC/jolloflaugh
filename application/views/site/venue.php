@@ -11,7 +11,7 @@
 
 	<!-- Site Title- -->
 	<?php foreach($venue as $ven){} ?>
-	<title><?php echo $ven->title; ?> || Ticket Event</title>
+	<title><?php echo $ven->title; ?> || Jollof N Laugh</title>
 
 	<!-- CSS
    ==================================================== -->
