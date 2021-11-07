@@ -90,16 +90,16 @@
 					<div class="footer-menu text-center">
 						<ul>
 							<li>
-								<a href="https://scottnnaghor.com/jollof_n_laugh/osconcert/index.php?stcPath=2" target="_blank">Privacy</a>
+								<a href="https://jollofnlaugh.com/osconcert/index.php?stcPath=2" target="_blank">Privacy</a>
 							</li>
 							<li>
-								<a href="https://scottnnaghor.com/jollof_n_laugh/osconcert/contact_us.php" target="_blank">Contact Us</a>
+								<a href="https://jollofnlaugh.com/osconcert/contact_us.php" target="_blank">Contact Us</a>
 							</li>
 							<li>
 								<a href="<?php echo site_url('advertise'); ?>" target="_blank">Advertise </a>
 							</li>
 							<li>
-								<a href="https://scottnnaghor.com/jollof_n_laugh/osconcert/index.php?stcPath=3" target="_blank">Terms & Conditions</a>
+								<a href="https://jollofnlaugh.com/osconcert/index.php?stcPath=3" target="_blank">Terms & Conditions</a>
 							</li>
 						</ul>
 					</div>
