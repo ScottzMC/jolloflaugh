@@ -29,6 +29,7 @@ if (DOWN_FOR_MAINTENANCE == 'true')
 	echo $url;} ?></div>
 	<nav id="navbar" class="navbar">
 	<ul>
+		<li><a href="https://jollofnlaugh.com/home">Home</a></li>
 	<?php
 	if (SHOW_MAIN_FEATURED_CATEGORIES == 'true')
 	{
@@ -99,6 +100,7 @@ if (DOWN_FOR_MAINTENANCE == 'true')
 	</div>
 	<nav id="navbar" class="navbar">
 	<ul>
+		<li><a href="https://jollofnlaugh.com/home">Home</a></li>
 	<?php
 	if (SHOW_MAIN_FEATURED_CATEGORIES == 'true')
 	{
