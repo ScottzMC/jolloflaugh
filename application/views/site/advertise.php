@@ -10,7 +10,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<!-- Site Title- -->
-	<title>Advertise with Us || Jollof N Laugh</title>
+	<title>Advertise with Us || The Jollof N Laugh Show</title>
 
 	<!-- CSS
    ==================================================== -->
