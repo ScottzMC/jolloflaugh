@@ -65,7 +65,7 @@
               $body = "
                 The reset code - $code
                 Upon clicking the link, put your reset code and new password in the reset page. 
-                If you want to reset your password, please click the link to reset the password - https://scottnnaghor.com/fastfood/account/reset";
+                If you want to reset your password, please click the link to reset the password - https://jollofnlaugh.com/account/reset_password";
               $type = "Forgot Password";
               $time = time();
               $date = date('Y-m-d H:i:s');
@@ -95,12 +95,7 @@
                 alert('Mail sent successfully');
                 window.location.href="<?php echo base_url('account/login'); ?>";
               </script>    
-            <?php }else{ ?>
-                <script>
-                    alert("Email does not exist ");
-                    window.location.href="<?php echo site_url('account/login'); ?>";
-                </script>
-       <?php }
+            <?php } 
            }
       }
       
