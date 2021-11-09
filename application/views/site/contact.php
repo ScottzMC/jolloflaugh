@@ -10,7 +10,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<!-- Site Title- -->
-	<title>Contact Us || Jollof N Laugh</title>
+	<title>Contact Us || The Jollof N Laugh Show</title>
 
 	<!-- CSS
    ==================================================== -->
