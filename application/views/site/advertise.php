@@ -83,7 +83,7 @@
 					<div class="contact-box ts-grid-box">
 						<h3>Advertise with Us</h3>
 							<p>Would you like to advertise your brand or product on our website? Or would you like your brand to feature on our live recorded shows? We work with a range of influencers 
-							and partners. Please get in touch and we help work out the right solution for you  </p>
+							and partners. Please get in touch and we can help to work out the right solution for you  </p>
 
 							<div class="widget contact-info">
 
