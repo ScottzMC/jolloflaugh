@@ -88,8 +88,9 @@
              //$this->email->cc("testcc@domainname.com");
              $this->email->subject("$subject");
              $this->email->message("$body");
+             $mail = $this->email->send();
     
-            if($this->email->send()){ ?>
+            if($mail){ ?>
             <script>
                 alert('Mail sent successfully');
                 window.location.href="<?php echo base_url('account/login'); ?>";
