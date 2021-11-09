@@ -127,7 +127,7 @@
                 alert('Account updated successfully');
                 window.location.href="<?php echo base_url('account/login'); ?>";
               </script> 
-      <?php }else{ ?>
+      <?php } else{ ?>
               <script>
                 alert('Reset Password Failed');
                 window.location.href="<?php echo base_url('account/login'); ?>";
