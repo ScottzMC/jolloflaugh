@@ -119,6 +119,24 @@
 		</div>
 	</section>
 	<!-- block wrapper end-->
+	
+	<section class="block-wrapper">
+	  <div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+	                <div class="comments-form ts-grid-box" style="text-align: center;">
+			            <div class="widgets ts-grid-box post-tab-list ts-col-box">
+				            <h3 class="">Book Event</h3>
+				            <!-- ts-overlay-style  end-->
+                            <div class="clearfix">
+					            <a class="comments-btn btn btn-primary" href="https://scottnnaghor.com/jollof_n_laugh/osconcert/index.php?cPath=1" target="_blank">Book Event</a>
+				            </div>
+			            </div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+	</section>
 
 	<!-- block post area start-->
 	<section class="block-wrapper mt-15">
