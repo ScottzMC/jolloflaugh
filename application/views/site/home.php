@@ -201,10 +201,16 @@
 						
 						<!-- Ads 3 -->
 						<div class="widgets widget-banner">
-							<a href="#">
-								<img src="<?php echo base_url('uploads/banner/jnl_bg-01.jpg'); ?>" alt="Ads 3">
-							</a>
-						</div>
+						    <div class="widgets ts-grid-box post-tab-list ts-col-box">
+    							<a href="#">
+    								<img src="<?php echo base_url('uploads/banner/jnl_bg-01.jpg'); ?>" alt="Ads 3">
+    							</a>
+    							
+    							<div class="clearfix">
+    								<br><a class="comments-btn btn btn-primary" href="https://shoobs.com/events/62346/jollof-n-laugh" target="_blank">Book Event</a>
+    							</div>
+							</div>
+						 </div>
 						<!-- End of Ads 3 -->
 						
 					</div>
@@ -252,10 +258,16 @@
 						
 						<!-- Ads 3 -->
 						<div class="widgets widget-banner">
-							<a href="#">
-								<img src="<?php echo base_url('uploads/banner/jnl_bg-01.jpg'); ?>" alt="Ads 3">
-							</a>
-						</div>
+						    <div class="widgets ts-grid-box post-tab-list ts-col-box">
+    							<a href="#">
+    								<img src="<?php echo base_url('uploads/banner/jnl_bg-01.jpg'); ?>" alt="Ads 3">
+    							</a>
+    							
+    							<div class="clearfix">
+    								<br><a class="comments-btn btn btn-primary" href="https://shoobs.com/events/62346/jollof-n-laugh" target="_blank">Book Event</a>
+    							</div>
+							</div>
+						 </div>
 						<!-- End of Ads 3 -->
 						
 					</div>
@@ -342,10 +354,16 @@
 						
 						<!-- Ads 3 -->
 						<div class="widgets widget-banner">
-							<a href="#">
-								<img src="<?php echo base_url('uploads/banner/jnl_bg-01.jpg'); ?>" alt="Ads 3">
-							</a>
-						</div>
+						    <div class="widgets ts-grid-box post-tab-list ts-col-box">
+    							<a href="#">
+    								<img src="<?php echo base_url('uploads/banner/jnl_bg-01.jpg'); ?>" alt="Ads 3">
+    							</a>
+    							
+    							<div class="clearfix">
+    								<br><a class="comments-btn btn btn-primary" href="https://shoobs.com/events/62346/jollof-n-laugh" target="_blank">Book Event</a>
+    							</div>
+							</div>
+						 </div>
 						<!-- End of Ads 3 -->
 						
 					</div>
