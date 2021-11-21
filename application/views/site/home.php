@@ -129,7 +129,7 @@
 				            <h3 class="">Book Event</h3>
 				            <!-- ts-overlay-style  end-->
                             <div class="clearfix">
-					            <a class="comments-btn btn btn-primary" href="https://scottnnaghor.com/jollof_n_laugh/osconcert/index.php?cPath=1" target="_blank">Book Event</a>
+					            <a class="comments-btn btn btn-primary" href="https://shoobs.com/events/62346/jollof-n-laugh" target="_blank">Book Event</a>
 				            </div>
 			            </div>
 		            </div>
