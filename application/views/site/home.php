@@ -129,7 +129,7 @@
 				            <h3 class="">Book Event</h3>
 				            <!-- ts-overlay-style  end-->
                             <div class="clearfix">
-					            <a class="comments-btn btn btn-primary" href="https://shoobs.com/events/62346/jollof-n-laugh" target="_blank">Book Event</a>
+					            <a class="comments-btn btn btn-primary" href="https://jollofnlaugh.com/osconcert/index.php?cPath=1" target="_blank">Book Event</a>
 				            </div>
 			            </div>
 		            </div>
@@ -225,7 +225,7 @@
     							</a>
     							
     							<div class="clearfix">
-    								<br><a class="comments-btn btn btn-primary" href="https://shoobs.com/events/62346/jollof-n-laugh" target="_blank">Book Event</a>
+    								<br><a class="comments-btn btn btn-primary" href="https://jollofnlaugh.com/osconcert/index.php?cPath=1" target="_blank">Book Event</a>
     							</div>
 							</div>
 						 </div>
@@ -282,7 +282,7 @@
     							</a>
     							
     							<div class="clearfix">
-    								<br><a class="comments-btn btn btn-primary" href="https://shoobs.com/events/62346/jollof-n-laugh" target="_blank">Book Event</a>
+    								<br><a class="comments-btn btn btn-primary" href="https://jollofnlaugh.com/osconcert/index.php?cPath=1" target="_blank">Book Event</a>
     							</div>
 							</div>
 						 </div>
@@ -378,7 +378,7 @@
     							</a>
     							
     							<div class="clearfix">
-    								<br><a class="comments-btn btn btn-primary" href="https://shoobs.com/events/62346/jollof-n-laugh" target="_blank">Book Event</a>
+    								<br><a class="comments-btn btn btn-primary" href="https://jollofnlaugh.com/osconcert/index.php?cPath=1" target="_blank">Book Event</a>
     							</div>
 							</div>
 						 </div>
