@@ -183,7 +183,7 @@
 				<div class="col-lg-3 col-md-6">
 					<div class="ts-grid-box ts-grid-content border-style">
 						<div class="post-content">
-							<a class="post-cat" href="https://shoobs.com/events/62346/jollof-n-laugh" target="_blank">Book</a>
+							<a class="post-cat" href="https://jollofnlaugh.com/osconcert/index.php?cPath=1" target="_blank">Book</a>
 							<!--<a class="post-cat" href="https://scottnnaghor.com/jollof_n_laugh/osconcert/index.php?cPath=1" target="_blank">Book</a>-->
 							<h3 class="post-title">
 								<a href="#"><?php echo $det->req_age; ?></a>
@@ -201,7 +201,7 @@
 				<div class="col-lg-3 col-md-6">
 					<div class="ts-grid-box ts-grid-content border-style">
 						<div class="post-content">
-							<a class="post-cat" href="https://shoobs.com/events/62346/jollof-n-laugh" target="_blank">Book</a>
+							<a class="post-cat" href="https://jollofnlaugh.com/osconcert/index.php?cPath=1" target="_blank">Book</a>
 							<h3 class="post-title">
 								<a href="#"><?php echo $det->req_dress_code; ?></a>
 							</h3>
@@ -218,7 +218,7 @@
 				<div class="col-lg-3 col-md-6">
 					<div class="ts-grid-box ts-grid-content border-style">
 						<div class="post-content">
-							<a class="post-cat" href="https://shoobs.com/events/62346/jollof-n-laugh" target="_blank">Book</a>
+							<a class="post-cat" href="https://jollofnlaugh.com/osconcert/index.php?cPath=1" target="_blank">Book</a>
 							<h3 class="post-title">
 								<a href="#"><?php echo $det->req_last_entry; ?></a>
 							</h3>
@@ -235,7 +235,7 @@
 				<div class="col-lg-3 col-md-6">
 					<div class="ts-grid-box ts-grid-content border-style">
 						<div class="post-content">
-							<a class="post-cat" href="https://shoobs.com/events/62346/jollof-n-laugh" target="_blank">Book</a>
+							<a class="post-cat" href="https://jollofnlaugh.com/osconcert/index.php?cPath=1" target="_blank">Book</a>
 							<h3 class="post-title">
 								<a href="#"><?php echo $det->req_id; ?></a>
 							</h3>
@@ -267,7 +267,7 @@
 							</div>
 							<br><br>
 							<div class="clearfix">
-            					<a class="comments-btn btn btn-primary" href="https://shoobs.com/events/62346/jollof-n-laugh">Book Event</a>
+            					<a class="comments-btn btn btn-primary" href="https://jollofnlaugh.com/osconcert/index.php?cPath=1">Book Event</a>
             				</div>
 							<!-- entry content end-->
 						</div>
@@ -329,7 +329,7 @@
 							</a>
 						</div>
 						<div class="post-content">
-							<a class="post-cat" href="https://shoobs.com/events/62346/jollof-n-laugh">Book</a>
+							<a class="post-cat" href="https://jollofnlaugh.com/osconcert/index.php?cPath=1">Book</a>
 							<h3 class="post-title">
 								<a href="#"><?php echo $det->req_age; ?></a>
 							</h3>
@@ -351,7 +351,7 @@
 							</a>
 						</div>
 						<div class="post-content">
-							<a class="post-cat" href="https://shoobs.com/events/62346/jollof-n-laugh">Book</a>
+							<a class="post-cat" href="https://jollofnlaugh.com/osconcert/index.php?cPath=1">Book</a>
 							<h3 class="post-title">
 								<a href="#"><?php echo $det->req_dress_code; ?></a>
 							</h3>
@@ -373,7 +373,7 @@
 							</a>
 						</div>
 						<div class="post-content">
-							<a class="post-cat" href="https://shoobs.com/events/62346/jollof-n-laugh" target="_blank">Book</a>
+							<a class="post-cat" href="https://jollofnlaugh.com/osconcert/index.php?cPath=1" target="_blank">Book</a>
 							<h3 class="post-title">
 								<a href="#"><?php echo $det->req_last_entry; ?></a>
 							</h3>
@@ -395,7 +395,7 @@
 							</a>
 						</div>
 						<div class="post-content">
-							<a class="post-cat" href="https://shoobs.com/events/62346/jollof-n-laugh" target="_blank">Book</a>
+							<a class="post-cat" href="https://jollofnlaugh.com/osconcert/index.php?cPath=1" target="_blank">Book</a>
 							<h3 class="post-title">
 								<a href="#"><?php echo $det->req_id; ?></a>
 							</h3>
@@ -422,7 +422,7 @@
 				<h3 class="">Book Event</h3>
 				<!-- ts-overlay-style  end-->
                 <div class="clearfix">
-					<a class="comments-btn btn btn-primary" href="https://shoobs.com/events/62346/jollof-n-laugh">Book Event</a>
+					<a class="comments-btn btn btn-primary" href="https://jollofnlaugh.com/osconcert/index.php?cPath=1">Book Event</a>
 					<!--<a class="comments-btn btn btn-primary" href="https://scottnnaghor.com/jollof_n_laugh/osconcert/index.php?cPath=1" target="_blank">Book Event</a>-->
 				</div>
 			</div>
