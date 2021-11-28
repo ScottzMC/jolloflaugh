@@ -1,9 +1,4 @@
-Header unset ETag
-FileETag None
-
-<FilesMatch "!\.(gif|jpe?g|png)$">
-    php_value session.cookie_domain jollofnlaugh.com
-</FilesMatch>
+RewriteOptions inherit
 
 <IfModule mod_rewrite.c>
 RewriteEngine On
