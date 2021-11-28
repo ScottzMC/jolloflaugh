@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'https://scottnnaghor.com/fastfood/';
+$config['base_url'] = 'https://jollofnlaugh.com/fastfood/';
 
 $config['stripe_key'] = 'pk_test_51H4X2nENqkbmUYd1Xxn4AJkg25RKJIcA5JsTCs4So7H59Ka2azFzPZ99cay6GtY1gS0JRV7mqUlGJQcOzvaKlsc600vKNsqJ4K';
 $config['stripe_secret'] = 'sk_test_51H4X2nENqkbmUYd177DHyvFCqk9xYExtrDEb4dvAi7srC6QKITva9HrhDIqD0u2b3g6ysxPui726atmq7esW0fPH00yAufwihb';
