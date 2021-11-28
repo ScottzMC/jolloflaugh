@@ -2,7 +2,7 @@ Header unset ETag
 FileETag None
 
 <FilesMatch "!\.(gif|jpe?g|png)$">
-    php_value session.cookie_domain scottnnaghor.com
+    php_value session.cookie_domain jollofnlaugh.com
 </FilesMatch>
 
 <IfModule mod_rewrite.c>
