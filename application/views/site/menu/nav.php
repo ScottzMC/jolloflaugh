@@ -114,6 +114,7 @@
 							<ul class="nav-menu">
 								<li><a style="" href="<?php echo site_url('home'); ?>">Home</a></li>
 								<li><a style="" href="<?php echo site_url('event/detail'); ?>">Book</a></li>
+								<li><a style="" href="https://jollof_n_laugh.com/fastfood/food_order" target="_blank">Order your meals</a></li>
 								<li><a style="" href="<?php echo site_url('venue'); ?>">Venue</a></li>
 							</ul>
 							<!--nav menu end-->
