@@ -53,6 +53,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['category/(:num)'] = 'food/category/$1';
 $route['search/(:num)'] = 'food/search/$1';
 
-$route['default_controller'] = 'Home';
+$route['default_controller'] = 'Food_order';
 $route['404_override'] = 'Custom404';
 $route['translate_uri_dashes'] = FALSE;
