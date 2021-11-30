@@ -130,9 +130,10 @@
                                                     <input type="hidden" name="image" value="<?php echo $stw->image1; ?>">
                                                     <button type="submit" name="add_cart" title="Add to Cart">Add To Cart</button>
                                                  </form>
-						  <div><?php echo $add_msg; ?></div>
+						  
                                             </div>
                                         </div>
+					 <div><?php echo $add_msg; ?></div>
                                         <?php //} ?>
                                     </div>
                                     <div class="product-content-wrap-2 product-content-position text-center">
@@ -157,6 +158,7 @@
 						 <div><?php echo $add_msg; ?></div>
                                             </div>
                                         </div>
+					 <div><?php echo $add_msg; ?></div>
                                         <?php //} ?>
                                     </div>
                                 </div>
