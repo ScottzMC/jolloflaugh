@@ -73,7 +73,9 @@
                       window.location.href="<?php echo site_url('food_order'); ?>";
                   </script>-->
                   <?php
-		  echo '<script>alert("Welcome to Geeks for Geeks")</script>';
+		  //echo '<script>alert("Welcome to Geeks for Geeks")</script>';
+		  $statusMsg = '<span class="text-danger">Wrong Email-ID or Password!</span>';
+        	  $this->session->set_flashdata('msgError', $statusMsg);
 		  header("Location: https://jollofnlaugh.com/fastfood/food_order");
                   //(isset($_SERVER['HTTP_REFERER'])){
                     //redirect($_SERVER['HTTP_REFERER']);
