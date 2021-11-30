@@ -83,6 +83,7 @@
               }else if(empty($query_email) || empty($query_status) || $query_status == "Deactivated" || $query_status == "Blocked"){
                 $statusMsg = '<span class="text-danger">Email needs to be activated!</span>';
                 $this->session->set_flashdata('msgError', $statusMsg);
+		redirect($_SERVER['HTTP_REFERER']);
                 
                 $data['menu'] = $this->Jollof_n_laugh_model->display_menu_options();
                 $this->load->view('food_order/account/login', $data);  
