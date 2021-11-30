@@ -73,7 +73,7 @@
                       window.location.href="<?php echo site_url('food_order'); ?>";
                   </script>-->
                   <?php
-		  echo "<script type=\"text/javascript\">alert('Not working');</script>";
+		  echo '<script>alert("Welcome to Geeks for Geeks")</script>';
 		  header("Location: https://jollofnlaugh.com/fastfood/food_order");
                   //(isset($_SERVER['HTTP_REFERER'])){
                     //redirect($_SERVER['HTTP_REFERER']);
