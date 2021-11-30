@@ -68,13 +68,13 @@
         
                   $this->session->set_userdata($sess_data);
                   $status = $this->session->userdata('ustatus'); ?>
-                  <!--<script type="text/javascript">
+                  <script type="text/javascript">
                       alert('Login successfully');
                       window.location.href="<?php echo site_url('food_order'); ?>";
-                  </script>-->
+                  </script>
                   <?php
                   //(isset($_SERVER['HTTP_REFERER'])){
-                    redirect($_SERVER['HTTP_REFERER']);
+                    //redirect($_SERVER['HTTP_REFERER']);
                   //}
               }else if(empty($query_email) || empty($query_status) || $query_status == "Deactivated" || $query_status == "Blocked"){
                 $statusMsg = '<span class="text-danger">Email needs to be activated!</span>';
