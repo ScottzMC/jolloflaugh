@@ -130,6 +130,7 @@
                                                     <input type="hidden" name="image" value="<?php echo $stw->image1; ?>">
                                                     <button type="submit" title="Add to Cart">Add To Cart</button>
                                                  </form>
+						  <?php echo $this->session->flashdata('msg'); ?>
                                             </div>
                                         </div>
                                         <?php //} ?>
@@ -153,6 +154,7 @@
                                                     <input type="hidden" name="image" value="<?php echo $stw->image1; ?>">
                                                     <button type="submit" title="Add to Cart">Add To Cart</button>
                                                  </form>
+						 <?php echo $this->session->flashdata('msg'); ?>
                                             </div>
                                         </div>
                                         <?php //} ?>
