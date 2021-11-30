@@ -69,6 +69,8 @@
     <?php 
     $session_email = $this->session->userdata('uemail');
     ?>
+	
+	<script>alert("Window test");</script>
 
     <div class="main-wrapper">
         <?php include 'menu/nav.php'; ?>
