@@ -349,10 +349,13 @@
     
          $this->cart->insert($insert_items);
          ?>
-         <script>
+         <!--<script>
              alert('Added to Cart');
              window.location.href="<?php echo site_url('food_order'); ?>";
-         </script> 
+         </script>--> 
+         $statusMsg = '<span class="text-success">Add to Cart</span>';
+         $this->session->set_flashdata('msgError', $statusMsg);
+	 redirect($_SERVER['HTTP_REFERER']);
          //redirect('jollof_n_laugh');
          <?php
         }
