@@ -346,10 +346,16 @@
             'category' => $this->input->post('category'),
             'image' => $this->input->post('image')
           );
+	  
+	  $btn_cart = $this->input->post('add_cart');
     
          $this->cart->insert($insert_items);
-	 $statusMsg = '<span class="text-success">Add to Cart</span>';
-         $this->session->set_flashdata('msgError', $statusMsg);
+	 
+	 if(isset($btn_cart)){
+    		$data['add_msg'] = '<p><div class="alert alert-success" role="alert">Added to Cart</div></p>';
+    	  }else{
+    		$data['add_msg'] = $this->session->flashdata('add_msg');
+    	  }
 	 redirect($_SERVER['HTTP_REFERER']);
          //redirect('jollof_n_laugh');
          ?>
