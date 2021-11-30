@@ -128,7 +128,7 @@
                                                     <input type="hidden" name="category" value="<?php echo $stw->category; ?>">
                                                     <input type="hidden" name="price" value="<?php echo $stw->price; ?>">
                                                     <input type="hidden" name="image" value="<?php echo $stw->image1; ?>">
-                                                    <button type="submit" title="Add to Cart">Add To Cart</button>
+                                                    <button type="submit" name="add_cart" title="Add to Cart">Add To Cart</button>
                                                  </form>
 						  <div><?php echo $add_msg; ?></div>
                                             </div>
@@ -152,7 +152,7 @@
                                                     <input type="hidden" name="category" value="<?php echo $stw->category; ?>">
                                                     <input type="hidden" name="price" value="<?php echo $stw->price; ?>">
                                                     <input type="hidden" name="image" value="<?php echo $stw->image1; ?>">
-                                                    <button type="submit" title="Add to Cart">Add To Cart</button>
+                                                    <button type="submit" name="add_cart" title="Add to Cart">Add To Cart</button>
                                                  </form>
 						 <div><?php echo $add_msg; ?></div>
                                             </div>
