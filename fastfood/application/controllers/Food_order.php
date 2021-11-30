@@ -68,15 +68,11 @@
         
                   $this->session->set_userdata($sess_data);
                   $status = $this->session->userdata('ustatus'); ?>
-                  <!--<script type="text/javascript">
+                  <script type="text/javascript">
                       alert('Login successfully');
                       window.location.href="<?php echo site_url('food_order'); ?>";
-                  </script>-->
+                  </script>
                   <?php
-		  echo '<script type="text/javascript">
-			 alert("Login was successful");
-			 window.location.href = "'.$_SERVER['HTTP_REFERER'].'"; ; 
-			 </script>';
                   //(isset($_SERVER['HTTP_REFERER'])){
                     //redirect($_SERVER['HTTP_REFERER']);
                   //}
