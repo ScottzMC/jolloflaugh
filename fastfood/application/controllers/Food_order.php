@@ -11,6 +11,14 @@
     	  }else{
     		$data['message'] = $this->session->flashdata('message');
     	  }
+	  
+	  $btn_cart = $this->input->post('add_cart');
+	  
+	  if(isset($btn_cart)){
+    		$data['add_msg'] = '<p><div class="alert alert-success" role="alert">Added to Cart</div></p>';
+    	  }else{
+    		$data['add_msg'] = $this->session->flashdata('add_msg');
+    	  }
     	  
     	  $email = $this->session->userdata('uemail');
     	  
