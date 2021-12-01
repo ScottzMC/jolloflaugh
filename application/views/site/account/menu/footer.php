@@ -93,7 +93,7 @@
 								<a href="https://jollofnlaugh.com/osconcert/index.php?stcPath=2" target="_blank">Privacy</a>
 							</li>
 							<li>
-								<a href="https://jollofnlaugh.com/contact" target="_blank">Contact Us</a>
+								<a href="<?php echo site_url('contact'); ?>" target="_blank">Contact Us</a>
 							</li>
 							<li>
 								<a href="<?php echo site_url('advertise'); ?>" target="_blank">Advertise </a>
