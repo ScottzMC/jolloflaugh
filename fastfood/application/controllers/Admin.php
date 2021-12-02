@@ -552,22 +552,29 @@
           $price = $this->input->post('price');
           $type = $this->input->post('type');
           $category = $this->input->post('category');
-          $description = $this->input->post('description');
+          /*$description = $this->input->post('description');
           $side_meal = $this->input->post('side_meal');
-          $side_drink = $this->input->post('side_drink');
+          $side_drink = $this->input->post('side_drink');*/
 
           $str_category = str_replace(' ', '-', $category);
           
-          $delivery_start = $this->input->post('delivery_start');
+          /*$delivery_start = $this->input->post('delivery_start');
           $delivery_end = $this->input->post('delivery_end');
           
           $days = $this->input->post('days');
           $all = $this->input->post('all');
           $stock = $this->input->post('stock');
           
-          $meal_voucher = $this->input->post('meal_voucher');
+          $meal_voucher = $this->input->post('meal_voucher');*/
+          
+          $food_array = array(
+            'title' => $str_title,
+            'price' => $price,
+            'type' => $type,
+            'category' => $str_category,
+          );
 
-          if(isset($all)){
+          /*if(isset($all)){
             $food_array = array(
             'title' => $str_title,
             'description' => $description,
@@ -600,7 +607,7 @@
             'delivery_end' => $delivery_end,
             'stock' => $stock
             );   
-          }
+          }*/
 
           $update_food = $this->Admin_model->update_food($id, $food_array);
 
@@ -698,12 +705,12 @@
           }
 
           $update_image1 = $this->Admin_model->update_food_image1($id, $fileName1);
-          $update_image2 = $this->Admin_model->update_food_image2($id, $fileName2);
+          /*$update_image2 = $this->Admin_model->update_food_image2($id, $fileName2);
           $update_image3 = $this->Admin_model->update_food_image3($id, $fileName3);
           $update_image4 = $this->Admin_model->update_food_image4($id, $fileName4);
-          $update_image5 = $this->Admin_model->update_food_image5($id, $fileName5);
+          $update_image5 = $this->Admin_model->update_food_image5($id, $fileName5);*/
 
-          if($update_image1 || $update_image2 || $update_image3 || $update_image4 || $update_image5){ ?>
+          if($update_image1 /* || $update_image2 || $update_image3 || $update_image4 || $update_image5*/){ ?>
             <script>
                 alert('Updated Successfully');
                 window.location.href="<?php echo site_url('admin/view_food'); ?>";
@@ -752,21 +759,21 @@
           $price = $this->input->post('price');
           $type = $this->input->post('type');
           $category = $this->input->post('category');
-          $description = $this->input->post('description');
+          /*$description = $this->input->post('description');
           $side_meal = $this->input->post('side_meal');
-          $side_drink = $this->input->post('side_drink');
+          $side_drink = $this->input->post('side_drink');*/
 
           $str_category = str_replace(' ', '-', $category);
           
-          $delivery_start = $this->input->post('delivery_start');
+          /*$delivery_start = $this->input->post('delivery_start');
           $delivery_end = $this->input->post('delivery_end');
           
           $days = $this->input->post('days');
           $all = $this->input->post('all');
           $stock = $this->input->post('stock');
           
-          $meal_voucher = $this->input->post('meal_voucher');
-
+          $meal_voucher = $this->input->post('meal_voucher');*/
+          
           $time = time();
           $date = date('Y-m-j H:i:s');
 
@@ -837,7 +844,19 @@
             //$images[] = $fileName1;
           }
           
-          if(isset($all)){
+          $food_array = array(
+            'code' => $code,  
+            'title' => $str_title,
+            'price' => $price,
+            'type' => $type,
+            'category' => $str_category,
+            'image1' => $fileName1,
+            'sold' => 0,
+            'created_time' => $time,
+            'created_date' => $date
+          );
+          
+          /*if(isset($all)){
             $food_array = array(
             'code' => $code,
             'title' => $str_title,
@@ -888,7 +907,7 @@
             'created_time' => $time,
             'created_date' => $date
             );   
-          }
+          }*/
 
           $insert_food = $this->Admin_model->insert_food($food_array);
 
