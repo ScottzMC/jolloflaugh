@@ -427,11 +427,9 @@ function convertToOrderFormat($timestamp){
 														<th>Food Name</th>
 														<th>Price</th>
                                                         <th>Quantity</th>
+                                                        <th>Seat type</th>
 														<th>Order Status</th>
                                                         <th>Order Notes</th>
-                                                        <th>Delivery Category</th>
-                                                        <th>Post Code</th>
-                                                        <th>Town</th>
                                                         <th>Time</th>
                                                         <th>Date</th>
                                                         <th>Action</th>
@@ -448,6 +446,7 @@ function convertToOrderFormat($timestamp){
 														<td><?php echo str_replace('-', ' ', $pend->title); ?></td>
                                                         <td>&pound;<?php echo $pend->price; ?></td>
                                                         <td style="text-align: center;"><?php echo $pend->quantity; ?></td>
+                                                        <td><?php echo $pend->seat_type; ?></td>
                             							<td>
                                                           <?php if($pend->status == "Pending"){ ?>
                                                           <span class="label label-info">
@@ -468,9 +467,6 @@ function convertToOrderFormat($timestamp){
                                                             <?php } ?>
                             							</td>
                             							<td><?php echo $pend->order_notes; ?></td>
-                            							<td><?php echo $pend->delivery_category; ?></td>
-                            							<td><?php echo $pend->postcode; ?></td>
-                            							<td><?php echo $pend->town; ?></td>
                                                         <td><?php echo convertToOrderFormat($pend->created_time); ?></td>
                                                         <td><?php echo date("j M Y", strtotime($pend->created_date)); ?></td>
                                                         <td>
@@ -533,11 +529,9 @@ function convertToOrderFormat($timestamp){
 														<th>Food Name</th>
 														<th>Price</th>
                                                         <th>Quantity</th>
+                                                        <th>Seat type</th>
 														<th>Order Status</th>
-														<th>Order Notes</th>
-														<th>Delivery Category</th>
-                                                        <th>Post Code</th>
-                                                        <th>Town</th>
+                                                        <th>Order Notes</th>
                                                         <th>Time</th>
                                                         <th>Date</th>
                                                         <th>Action</th>
@@ -554,6 +548,7 @@ function convertToOrderFormat($timestamp){
 														<td><?php echo str_replace('-', ' ', $delving->title); ?></td>
                                                         <td>&pound;<?php echo $delving->price; ?></td>
                                                         <td style="text-align: center;"><?php echo $delving->quantity; ?></td>
+                                                        <td><?php echo $delving->seat_type; ?></td>
                             							<td>
                                                           <?php if($delving->status == "Pending"){ ?>
                                                           <span class="label label-info">
@@ -574,9 +569,6 @@ function convertToOrderFormat($timestamp){
                                                             <?php } ?>
                             							</td>
                             							<td><?php echo $delving->order_notes; ?></td>
-                            							<td><?php echo $delving->delivery_category; ?></td>
-                            							<td><?php echo $delving->postcode; ?></td>
-                            							<td><?php echo $delving->town; ?></td>
                                                         <td><?php echo convertToOrderFormat($delving->created_time); ?></td>
                                                         <td><?php echo date("j M Y", strtotime($delving->created_date)); ?></td>
                                                         <!--<td>
@@ -639,11 +631,9 @@ function convertToOrderFormat($timestamp){
 														<th>Food Name</th>
 														<th>Price</th>
                                                         <th>Quantity</th>
+                                                        <th>Seat type</th>
 														<th>Order Status</th>
-														<th>Order Notes</th>
-														<th>Delivery Category</th>
-                                                        <th>Post Code</th>
-                                                        <th>Town</th>
+                                                        <th>Order Notes</th>
                                                         <th>Time</th>
                                                         <th>Date</th>
                                                         <th>Action</th>
@@ -660,6 +650,7 @@ function convertToOrderFormat($timestamp){
 														<td><?php echo str_replace('-', ' ', $delved->title); ?></td>
                                                         <td>&pound;<?php echo $delved->price; ?></td>
                                                         <td style="text-align: center;"><?php echo $delved->quantity; ?></td>
+                                                        <td><?php echo $delved->seat_type; ?></td>
                             							<td>
                                                           <?php if($delved->status == "Pending"){ ?>
                                                           <span class="label label-info">
@@ -667,29 +658,21 @@ function convertToOrderFormat($timestamp){
                                                           </span>
                                                           <?php }else if($delved->status == "Delivering"){ ?>
                                                           <span class="label label-warning">
-                                                            <?php echo $delved->status; ?>
+                                                            <?php echo $pend->status; ?>
                                                           </span>
                                                             <?php }else if($delved->status == "Delivered"){ ?>
                                                           <span class="label label-success">
-                                                            <?php echo $delved->status; ?>
+                                                            <?php echo $pend->status; ?>
                                                           </span>
                                                             <?php }else if($delved->status == "Cancelled"){ ?>
                                                           <span class="label label-danger">
-                                                            <?php echo $delved->status; ?>
+                                                            <?php echo $pend->status; ?>
                                                           </span>
                                                             <?php } ?>
                             							</td>
                             							<td><?php echo $delved->order_notes; ?></td>
-                            							<td><?php echo $delved->delivery_category; ?></td>
-                            							<td><?php echo $delved->postcode; ?></td>
-                            							<td><?php echo $delved->town; ?></td>
                                                         <td><?php echo convertToOrderFormat($delved->created_time); ?></td>
                                                         <td><?php echo date("j M Y", strtotime($delved->created_date)); ?></td>
-                                                        <!--<td>
-													     <a href="<?php echo site_url('admin/delivered/'.$delved->id); ?>" class="btn btn-info btn-icon-anim btn-square" title="View Order">
-                                                           <i class="icon-check"></i>
-                                                         </a>
-                                                        </td>-->
                                                         <td>
 													        <button class="btn btn-info btn-icon-anim btn-square" onclick="deliveringorder(<?php echo $delved->id; ?>)" title="Delivering Order">
                                                                 <i class="icon-check"></i>
@@ -705,6 +688,11 @@ function convertToOrderFormat($timestamp){
                                                                 <i class="icon-check"></i>
                                                             </button>
                                                         </td>
+                                                        <!--<td>
+													     <a href="<?php echo site_url('admin/pending/'.$delved->id); ?>" class="btn btn-info btn-icon-anim btn-square" title="View Order">
+                                                           <i class="icon-check"></i>
+                                                         </a>
+                                                        </td>-->
                                                         <td>
                             							  <button class="btn btn-danger btn-icon-anim btn-square" onclick="deleteorder(<?php echo $delved->id; ?>)" title="Delete Order">
                                                            <i class="icon-trash"></i>
@@ -745,13 +733,12 @@ function convertToOrderFormat($timestamp){
 														<th>Food Name</th>
 														<th>Price</th>
                                                         <th>Quantity</th>
+                                                        <th>Seat type</th>
 														<th>Order Status</th>
-														<th>Order Notes</th>
-														<th>Delivery Category</th>
-                                                        <th>Post Code</th>
-                                                        <th>Town</th>
+                                                        <th>Order Notes</th>
                                                         <th>Time</th>
                                                         <th>Date</th>
+                                                        <th>Action</th>
 													</tr>
 												</thead>
 												<tbody>
@@ -762,6 +749,7 @@ function convertToOrderFormat($timestamp){
 														<td><?php echo str_replace('-', ' ', $cancel->title); ?></td>
                                                         <td>&pound;<?php echo $cancel->price; ?></td>
                                                         <td style="text-align: center;"><?php echo $cancel->quantity; ?></td>
+                                                        <td><?php echo $cancel->seat_type; ?></td>
                             							<td>
                                                           <?php if($cancel->status == "Pending"){ ?>
                                                           <span class="label label-info">
@@ -782,11 +770,13 @@ function convertToOrderFormat($timestamp){
                                                             <?php } ?>
                             							</td>
                             							<td><?php echo $cancel->order_notes; ?></td>
-                            							<td><?php echo $cancel->delivery_category; ?></td>
-                            							<td><?php echo $cancel->postcode; ?></td>
-                            							<td><?php echo $cancel->town; ?></td>
                                                         <td><?php echo convertToOrderFormat($cancel->created_time); ?></td>
                                                         <td><?php echo date("j M Y", strtotime($cancel->created_date)); ?></td>
+                                                        <td>
+                            							  <button class="btn btn-danger btn-icon-anim btn-square" onclick="deleteorder(<?php echo $cancel->id; ?>)" title="Delete Order">
+                                                           <i class="icon-trash"></i>
+                                                         </button>
+                                                        </td>
 													</tr>
                                                 <?php } }else{ echo ''; } ?>
 												</tbody>
