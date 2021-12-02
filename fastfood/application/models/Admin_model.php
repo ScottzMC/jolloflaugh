@@ -203,64 +203,62 @@
     }
 
     public function display_all_pending_orders(){
-      $query = $this->db->query("SELECT order_items.id, order_items.order_id, order_items.email, order_items.title, order_items.price, order_items.quantity, order_items.delivery_category,
-      order_items.status, order_items.order_notes, order_items.created_time, order_items.created_date, order_details.order_id, order_details.firstname, order_details.lastname, order_details.telephone, 
-      order_details.address, order_details.town, order_details.postcode FROM order_items INNER JOIN order_details ON order_items.order_id = order_details.order_id WHERE order_items.status = 'Pending' 
-      ORDER BY order_items.created_date ASC")->result();
+      $this->db->order_by('created_date', 'ASC');
+      $this->db->where('status', 'Pending');
+      $query = $this->db->get('order_items')->result();
       return $query;
     }
     
     public function display_all_pending_order_by_id($id){
-      $query = $this->db->query("SELECT order_items.id, order_items.order_id, order_items.email, order_items.title, order_items.price, order_items.quantity, order_items.delivery_category,
-      order_items.status, order_items.order_notes, order_items.created_time, order_items.created_date, order_details.order_id, order_details.firstname, order_details.lastname, order_details.telephone, 
-      order_details.address, order_details.town, order_details.postcode FROM order_items INNER JOIN order_details ON order_items.order_id = order_details.order_id WHERE order_items.status = 'Pending' 
-      AND order_items.id = '$id' ORDER BY order_items.created_date ASC")->result();
+      $this->db->order_by('created_date', 'ASC');
+      $this->db->where('status', 'Pending');
+      $this->db->where('id', $id);
+      $query = $this->db->get('order_items')->result();
       return $query;
     }
     
     public function display_all_delivering_orders(){
-      $query = $this->db->query("SELECT order_items.id, order_items.order_id, order_items.email, order_items.title, order_items.price, order_items.quantity, order_items.delivery_category,
-      order_items.status, order_items.order_notes, order_items.created_time, order_items.created_date, order_details.order_id, order_details.firstname, order_details.lastname, order_details.telephone, 
-      order_details.address, order_details.town, order_details.postcode FROM order_items INNER JOIN order_details ON order_items.order_id = order_details.order_id WHERE order_items.status = 'Delivering' 
-      ORDER BY order_items.created_date ASC")->result();
+      $this->db->order_by('created_date', 'ASC');
+      $this->db->where('status', 'Delivering');
+      $query = $this->db->get('order_items')->result();
       return $query;
     }
     
     public function display_all_delivering_order_by_id($id){
-      $query = $this->db->query("SELECT order_items.id, order_items.order_id, order_items.email, order_items.title, order_items.price, order_items.quantity, order_items.delivery_category,
-      order_items.status, order_items.order_notes, order_items.created_time, order_items.created_date, order_details.order_id, order_details.firstname, order_details.lastname, order_details.telephone, 
-      order_details.address, order_details.town, order_details.postcode FROM order_items INNER JOIN order_details ON order_items.order_id = order_details.order_id WHERE order_items.status = 'Delivering' 
-      AND order_items.id = '$id' ORDER BY order_items.created_date ASC")->result();
+      $this->db->order_by('created_date', 'ASC');
+      $this->db->where('status', 'Pending');
+      $this->db->where('id', $id);
+      $query = $this->db->get('Delivering')->result();
       return $query;
     }
     
     public function display_all_delivered_orders(){
-      $query = $this->db->query("SELECT order_items.id, order_items.order_id, order_items.email, order_items.title, order_items.price, order_items.quantity, order_items.delivery_category,
-      order_items.status, order_items.order_notes, order_items.created_time, order_items.created_date, order_details.order_id, order_details.firstname, order_details.lastname, order_details.telephone, 
-      order_details.address, order_details.town, order_details.postcode FROM order_items INNER JOIN order_details ON order_items.order_id = order_details.order_id WHERE order_items.status = 'Delivered' ORDER BY order_items.created_date ASC")->result();
+      $this->db->order_by('created_date', 'ASC');
+      $this->db->where('status', 'Delivered');
+      $query = $this->db->get('order_items')->result();
       return $query;
     }
     
     public function display_all_delivered_order_by_id($id){
-      $query = $this->db->query("SELECT order_items.id, order_items.order_id, order_items.email, order_items.title, order_items.price, order_items.quantity, order_items.delivery_category,
-      order_items.status, order_items.order_notes, order_items.created_time, order_items.created_date, order_details.order_id, order_details.firstname, order_details.lastname, order_details.telephone, 
-      order_details.address, order_details.town, order_details.postcode FROM order_items INNER JOIN order_details ON order_items.order_id = order_details.order_id WHERE order_items.status = 'Delivered' 
-      AND order_items.id = '$id' ORDER BY order_items.created_date ASC")->result();
+      $this->db->order_by('created_date', 'ASC');
+      $this->db->where('status', 'Pending');
+      $this->db->where('id', $id);
+      $query = $this->db->get('Delivered')->result();
       return $query;
     }
     
     public function display_all_cancelled_orders(){
-      $query = $this->db->query("SELECT order_items.id, order_items.order_id, order_items.email, order_items.title, order_items.price, order_items.quantity, order_items.delivery_category,
-      order_items.status, order_items.order_notes, order_items.created_time, order_items.created_date, order_details.order_id, order_details.firstname, order_details.lastname, order_details.telephone, 
-      order_details.address, order_details.town, order_details.postcode FROM order_items INNER JOIN order_details ON order_items.order_id = order_details.order_id WHERE order_items.status = 'Cancelled' 
-      ORDER BY order_items.created_date ASC")->result();
+      $this->db->order_by('created_date', 'ASC');
+      $this->db->where('status', 'Cancelled');
+      $query = $this->db->get('order_items')->result();
       return $query;
     }
     
     public function display_all_order_details(){
-      $query = $this->db->query("SELECT order_items.id, order_items.order_id, order_items.email, order_items.title, order_items.price, order_items.quantity, order_items.delivery_category,
+      $query = $this->db->query("SELECT order_items.id, order_items.order_id, order_items.email, order_items.title, order_items.price, order_items.quantity, order_items.seat_type, order_items.delivery_category,
       order_items.status, order_items.order_notes, order_items.created_time, order_items.created_date, order_details.order_id, order_details.firstname, order_details.lastname, order_details.telephone, 
-      order_details.address, order_details.town, order_details.postcode FROM order_items INNER JOIN order_details ON order_items.order_id = order_details.order_id WHERE order_items.status = 'Delivered' ORDER BY order_items.created_date ASC")->result();
+      order_details.address, order_details.town, order_details.postcode FROM order_items INNER JOIN order_details ON order_items.order_id = order_details.order_id WHERE order_items.status = 'Delivered' 
+      ORDER BY order_items.created_date ASC")->result();
       return $query;
     }
 
