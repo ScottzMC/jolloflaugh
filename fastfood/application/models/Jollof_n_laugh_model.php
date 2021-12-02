@@ -129,11 +129,9 @@
       }
       
       public function display_all_order_by_email($email, $code){
-        $query = $this->db->query("SELECT order_items.id, order_items.order_id, order_items.email, order_items.title, order_items.price, order_items.quantity, order_items.delivery_category,
-        order_items.status, order_items.order_notes, order_items.created_time, order_items.created_date, order_details.order_id, order_details.firstname, order_details.lastname, order_details.telephone, 
-        order_details.address, order_details.town, order_details.postcode FROM order_items INNER JOIN order_details ON order_items.order_id = order_details.order_id WHERE order_items.status = 'Pending' 
-        AND order_items.email = '$email' AND order_items.order_id = '$code' ORDER BY order_items.created_date ASC")->result();
-        return $query;
+          $this->db->where('email', $email);
+          $this->db->where('order_id', $code);
+          return $this->db->get('order_items')->result();
       }
     	
       public function cancel_order($id){
