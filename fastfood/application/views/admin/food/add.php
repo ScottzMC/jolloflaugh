@@ -75,7 +75,14 @@
 									                            <?php } }else{ ?>
 									                            <option>No Data</option>
 									                            <?php } ?>
-															</select>
+															   </select>
+															
+    															<br><label class="control-label mb-10">Price</label>
+    															<div class="input-group">
+    																<div class="input-group-addon"><i>&pound;</i></div>
+    																<input type="text" name="price" class="form-control" placeholder="1000" required>
+                                                                    <span class="text-danger"><?php echo form_error('price'); ?></span>
+    															</div>
 														</div>
 													</div>
 													
@@ -84,15 +91,15 @@
 												
 												<div class="row">
 													<div class="col-md-6">
-														<div class="form-group">
+														<!--<div class="form-group">
 															<label class="control-label mb-10">Price</label>
 															<div class="input-group">
 																<div class="input-group-addon"><i>&pound;</i></div>
 																<input type="text" name="price" class="form-control" placeholder="1000" required>
                                                                 <span class="text-danger"><?php echo form_error('price'); ?></span>
 															</div>
-														</div>
-														<div class="form-group">
+														</div>-->
+														<!--<div class="form-group">
 															<label class="control-label mb-10">Available Days</label>
 															<div class="input-group">
 																<input type="checkbox" name="all" class="" value="Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday"> All<br>
@@ -118,13 +125,13 @@
 																<input type="radio" name="meal_voucher" class="" value="Yes"> Yes<br>
 																<input type="radio" name="meal_voucher" class="" value="No"> No<br>
 															</div>
-														</div>
+														</div>-->
 													</div>
-													<div class="col-md-6">
+													<!--<div class="col-md-6">
 														<div class="form-group">
 															<label class="control-label mb-10">Side Meal</label>
 															<!--<select class="form-control" data-placeholder="Choose a Type" tabindex="1" id="type" name="type" onchange="changeProduct('type', 'category', 'subcategory', 'model', 'year', 'location')">-->
-                                                            <select class="form-control" data-placeholder="Choose a Side Meal" name="side_meal" required>
+                                                            <!--<select class="form-control" data-placeholder="Choose a Side Meal" name="side_meal" required>
                                                                 <option>Select</option>
                                                                 <option value="Yes">Yes</option>
                                                                 <option value="No">No</option>
@@ -134,7 +141,7 @@
 														<div class="form-group">
 															<label class="control-label mb-10">Side Drinks</label>
 															<!--<select class="form-control" data-placeholder="Choose a Type" tabindex="1" id="type" name="type" onchange="changeProduct('type', 'category', 'subcategory', 'model', 'year', 'location')">-->
-                                                            <select class="form-control" data-placeholder="Choose a Side Drinks" name="side_drink" required>
+                                                            <!--<select class="form-control" data-placeholder="Choose a Side Drinks" name="side_drink" required>
                                                                 <option>Select</option>
                                                                 <option value="Yes">Yes</option>
                                                                 <option value="No">No</option>
@@ -189,16 +196,16 @@
                                                                 <option value="18:00">06:00pm</option>  
 															</select>
 														</div>
-													  </div>
+													  </div>-->
 
 													<!--/span-->
 												</div>
 												
 													<!--/span-->
-												<hr>
+												<!--<hr>
 												<h6 class="txt-dark capitalize-font"><i class="icon-speech mr-10"></i>Description</h6>
-												<hr>
-												<div class="row">
+												<hr>-->
+												<!--<div class="row">
 													<div class="col-md-12">
 														<div class="panel-wrapper collapse in">
 															<div class="panel-body">
@@ -218,7 +225,7 @@
 														<label>Image 1</label>
 														<input type="file" name="userFiles1[]" class="filestyle" data-buttonname="btn-primary">
 														<br>
-														<label>Image 2</label>
+														<!--<label>Image 2</label>
 														<input type="file" name="userFiles2[]" class="filestyle" data-buttonname="btn-primary">
 														<br>
 														<label>Image 3</label>
@@ -228,8 +235,8 @@
 														<input type="file" name="userFiles4[]" class="filestyle" data-buttonname="btn-primary">
 														<br>
 														<label>Image 5</label>
-														<input type="file" name="userFiles5[]" class="filestyle" data-buttonname="btn-primary">
-														</div>
+														<input type="file" name="userFiles5[]" class="filestyle" data-buttonname="btn-primary">-->
+													 </div>
 													</div>
 												</div>
 												<div class="seprator-block"></div>
