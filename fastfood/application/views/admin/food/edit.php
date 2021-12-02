@@ -93,7 +93,7 @@
                                                                 <span class="text-danger"><?php echo form_error('price'); ?></span>
 															</div>
 														</div>
-														<div class="form-group">
+														<!--<div class="form-group">
 														    <?php 
 														    $exp_date = explode(' , ', $edt_fod->date);
 														    ?>
@@ -132,13 +132,13 @@
 																<input type="radio" name="meal_voucher" class="" value="No" checked> No<br>
 																<?php } ?>
 															</div>
-														</div>
+														</div>-->
 													</div>
-													<div class="col-md-6">
+													<!--<div class="col-md-6">
 														<div class="form-group">
 															<label class="control-label mb-10">Side Meal</label>
 															<!--<select class="form-control" data-placeholder="Choose a Type" tabindex="1" id="type" name="type" onchange="changeProduct('type', 'category', 'subcategory', 'model', 'year', 'location')">-->
-                                                            <select class="form-control" data-placeholder="Choose a Side Meal" name="side_meal" required>
+                                                            <!--<select class="form-control" data-placeholder="Choose a Side Meal" name="side_meal" required>
                                                                 <option value="<?php echo $edt_fod->side_meal; ?>"><?php echo $edt_fod->side_meal; ?></option>
                                                                 <option>Select</option>
                                                                 <option value="Yes">Yes</option>
@@ -149,7 +149,7 @@
 														<div class="form-group">
 															<label class="control-label mb-10">Side Drinks</label>
 															<!--<select class="form-control" data-placeholder="Choose a Type" tabindex="1" id="type" name="type" onchange="changeProduct('type', 'category', 'subcategory', 'model', 'year', 'location')">-->
-                                                            <select class="form-control" data-placeholder="Choose a Side Drinks" name="side_drink" required>
+                                                            <!--<select class="form-control" data-placeholder="Choose a Side Drinks" name="side_drink" required>
                                                                 <option value="<?php echo $edt_fod->side_drink; ?>"><?php echo $edt_fod->side_drink; ?></option>
                                                                 <option>Select</option>
                                                                 <option value="Yes">Yes</option>
@@ -207,13 +207,13 @@
                                                                 <option value="18:00">06:00pm</option>  
 															</select>
 														</div>
-													  </div>
+													  </div>-->
 
 													<!--/span-->
 												</div>
 												
 												<hr>
-												<h6 class="txt-dark capitalize-font"><i class="icon-speech mr-10"></i>Description</h6>
+												<!--<h6 class="txt-dark capitalize-font"><i class="icon-speech mr-10"></i>Description</h6>
 												<hr>
 												<div class="row">
 													<div class="col-md-12">
@@ -260,7 +260,7 @@
 													<div class="col-lg-12">
 														<label>Image 1</label>
 														<input type="file" name="userFiles1[]" class="filestyle" data-buttonname="btn-primary">
-														<br>
+														<!--<br>
 														<label>Image 2</label>
 														<input type="file" name="userFiles2[]" class="filestyle" data-buttonname="btn-primary">
 														<br>
@@ -271,8 +271,8 @@
 														<input type="file" name="userFiles4[]" class="filestyle" data-buttonname="btn-primary">
 														<br>
 														<label>Image 5</label>
-														<input type="file" name="userFiles5[]" class="filestyle" data-buttonname="btn-primary">
-														</div>
+														<input type="file" name="userFiles5[]" class="filestyle" data-buttonname="btn-primary">-->
+													 </div>
 													</div>
 												</div>
 												<div class="seprator-block"></div>
