@@ -414,7 +414,8 @@
           );
     
          $this->cart->insert($insert_items);
-	 redirect('jollof_n_laugh');
+	 //redirect('jollof_n_laugh');
+	 header('Location: jollof_n_laugh?success=1');
         }
     
         public function remove_cart($rowid){
