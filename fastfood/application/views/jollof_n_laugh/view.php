@@ -78,7 +78,7 @@
             <div class="hero-slider-active-1 nav-style-1 dot-style-2 dot-style-2-position-2 dot-style-2-active-black">
                 <?php if(!empty($slider)){ foreach($slider as $slid){ ?>
                 <div class="single-hero-slider single-animation-wrap slider-height-2 custom-d-flex custom-align-item-center bg-img hm2-slider-bg res-white-overly-xs" 
-                style="background:url(uploads/slider/<?php echo $slid->image; ?>); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; background-repeat: no-repeat;">
+                style="background:url(https://jollofnlaugh.com/fastfood/uploads/slider/<?php echo $slid->image; ?>); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; background-repeat: no-repeat;">
                     <div class="container">
                         <div class="row">
                             <div class="col-12">
