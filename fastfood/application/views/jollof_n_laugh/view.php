@@ -19,10 +19,10 @@
     
     <link rel="stylesheet" href="https://jollofnlaugh.com/fastfood/assets/css/vendor/cerebrisans.css">
     <link rel="stylesheet" href="https://jollofnlaugh.com/fastfood/assets/css/vendor/simple-line-icons.css">
-    <link rel="stylesheet" href="https://jollofnlaugh.com/fastfoodassets/css/vendor/elegant.css">
-    <link rel="stylesheet" href="https://jollofnlaugh.com/fastfoodassets/css/plugins/nice-select.css">
-    <link rel="stylesheet" href="https://jollofnlaugh.com/fastfoodassets/css/plugins/slick.css">
-    <link rel="stylesheet" href="https://jollofnlaugh.com/fastfoodassets/css/style.min.css">
+    <link rel="stylesheet" href="https://jollofnlaugh.com/fastfood/assets/css/vendor/elegant.css">
+    <link rel="stylesheet" href="https://jollofnlaugh.com/fastfood/assets/css/plugins/nice-select.css">
+    <link rel="stylesheet" href="https://jollofnlaugh.com/fastfood/assets/css/plugins/slick.css">
+    <link rel="stylesheet" href="https://jollofnlaugh.com/fastfood/assets/css/style.min.css">
 
     <!-- Use the minified version files listed below for better performance and remove the files listed above
     <link rel="stylesheet" href="assets/css/vendor/vendor.min.css">
