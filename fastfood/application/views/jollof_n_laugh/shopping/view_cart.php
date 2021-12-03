@@ -131,6 +131,7 @@
                                             <a href="<?php echo site_url('jollof_n_laugh'); ?>">Continue Shopping</a>
                                         </div>
                                         <div class="cart-clear">
+						<script>alert('Suc');</script>
                                             <button type="button" onchange="updateCartItem(this, '<?php echo $item["rowid"]; ?>')">Update Cart</button>
                                             <a href="<?php echo site_url('jollof_n_laugh/clear_cart'); ?>">Clear Cart</a>
                                         </div>
