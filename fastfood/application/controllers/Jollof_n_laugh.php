@@ -543,7 +543,7 @@
             //$this->cart->destroy();
             
             if($order_items){ 
-		redirect('jollof_n_laugh/make_order_payment/'.$email.'/'.strtolower($order_code));
+		redirect('jollof_n_laugh/make_order_payment/'.strtolower($order_code));
 	    ?>
                 <!--<script>
                     //alert('Order Successfully');
@@ -561,7 +561,7 @@
         //}
       }
       
-      public function make_order_payment($email, $order_code){
+      public function make_order_payment($order_code){
 
            if(!$this->cart->contents()){
 			 $data['message'] = '<p><div class="alert alert-danger" role="alert">Your cart is empty!</div></p>';
@@ -570,7 +570,7 @@
 		   }
           
            $data['menu'] = $this->Jollof_n_laugh_model->display_menu_options();
-           $data['order_item'] = $this->Jollof_n_laugh_model->display_all_order_by_email($email, $order_code);
+           $data['order_item'] = $this->Jollof_n_laugh_model->display_all_order_by_email($order_code);
 
            $this->load->view('jollof_n_laugh/shopping/payment', $data);
 
