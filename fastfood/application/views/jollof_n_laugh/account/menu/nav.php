@@ -7,7 +7,7 @@
                             <div class="row align-items-center">
                                 <div class="col-xl-3 col-lg-2">
                                     <div class="logo">
-                                        <a href="<?php echo site_url('jollof_n_laugh'); ?>"><img src="<?php echo base_url('assets/images/logo/logo.png'); ?>" alt="logo"></a>
+                                        <a href="<?php echo site_url('jollof_n_laugh'); ?>"><img src="<?php echo base_url('assets/images/logo/logo-vr.png'); ?>" alt="logo"></a>
                                     </div>
                                 </div>
                                 <div class="col-xl-6 col-lg-7">
@@ -53,7 +53,7 @@
                         <div class="col-5">
                             <div class="mobile-logo">
                                 <a href="<?php echo site_url('jollof_n_laugh'); ?>">
-                                    <img alt="logo" src="<?php echo base_url('assets/images/logo/logo.png'); ?>">
+                                    <img alt="logo" src="<?php echo base_url('assets/images/logo/logo-vr.png'); ?>">
                                 </a>
                             </div>
                         </div>
