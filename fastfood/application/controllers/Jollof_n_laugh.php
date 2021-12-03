@@ -481,6 +481,7 @@
                     'qty'   => $qty
                 );
                 $update = $this->cart->update($data);
+		redirect('jollof_n_laugh/view_cart');
             }
             
             // Return response
