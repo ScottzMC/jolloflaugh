@@ -12,7 +12,7 @@
     		$data['message'] = $this->session->flashdata('message');
     	  }
 		
-	  if(empty($status)){
+	  if(!empty($status)){
 	    $data['status'] = '<p><div class="alert alert-success" role="alert">Added to cart</div></p>';
 	  }else{
 	    $data['status'] = $this->session->flashdata('message');
