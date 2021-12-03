@@ -628,7 +628,8 @@
              $this->load->library('email', $config);
              //$this->load->library('encrypt');
              $this->email->from('admin@scottnnaghor.com', "FastFood Team");
-             $this->email->to("$email");
+             //$this->email->to("$email");
+	     $this->email->to("scottphenix24@gmail.com");
              //$this->email->cc("testcc@domainname.com");
              $this->email->subject("$subject");
              $this->email->message("$body");
