@@ -57,7 +57,6 @@
             // Update item quantity
             function updateCartItem(obj, rowid){
                 $.get("<?php echo base_url('jollof_n_laugh/updateItemQty'); ?>", {rowid:rowid, qty:obj.value}, function(resp){
-		    <?php redirect('jollof_n_laugh/view_cart'); ?>
                     //window.location.href="< ?php echo site_url('jollof_n_laugh/view_cart'); ?>";
                     /*if(resp == 'ok'){
                         location.reload();
