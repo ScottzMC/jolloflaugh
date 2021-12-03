@@ -414,30 +414,10 @@
           );
 	     
          $this->cart->insert($insert_items);
-	 $statusMsg = '<p><div class="alert alert-success">Added to cart <button type="button" class="close" aria-label="Close">
-  	<span aria-hidden="true">&times;</span>
-	</button></div></p>';
+	 $statusMsg = '<p><div class="alert alert-success">Added to cart <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+	 <span aria-hidden="true">&times;</span></button></div></p>';
          $this->session->set_flashdata('status', $statusMsg);
 	 redirect('jollof_n_laugh');
-	 /*if(!$this->cart->contents()){
-    		$data['message'] = '<p><div class="alert alert-danger" role="alert">Your cart is empty!</div></p>';
-    	  }else{
-    		$data['message'] = $this->session->flashdata('message');
-    	  }
-    	  
-    	  $email = $this->session->userdata('uemail');
-    	  
-          $data['menu'] = $this->Jollof_n_laugh_model->display_menu_options();
-          
-          $data['rice'] = $this->Jollof_n_laugh_model->display_meal_for_rice();    
-          $data['stews'] = $this->Jollof_n_laugh_model->display_meal_for_stew();  
-          $data['vegan'] = $this->Jollof_n_laugh_model->display_meal_for_vegan();  
-          $data['side'] = $this->Jollof_n_laugh_model->display_meal_for_side();  
-          $data['dessert'] = $this->Jollof_n_laugh_model->display_meal_for_dessert();  
-          
-          $data['slider'] = $this->Jollof_n_laugh_model->display_slider_by_home("jollof_n_laugh");
-
-          $this->load->view('jollof_n_laugh/view', $data);*/
         }
     
         public function remove_cart($rowid){
