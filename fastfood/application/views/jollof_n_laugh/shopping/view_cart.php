@@ -57,7 +57,7 @@
             // Update item quantity
             function updateCartItem(obj, rowid){
                 $.get("https://jollofnlaugh.com/fastfood/jollof_n_laugh/updateItemQty", {rowid:rowid, qty:obj.value}, function(resp){
-                    window.location.href="https://jollofnlaugh.com/fastfood/jollof_n_laugh";
+                    window.location.href="https://jollofnlaugh.com/fastfood/jollof_n_laugh/view_cart";
                     /*if(resp == 'ok'){
                         location.reload();
                     }else{
