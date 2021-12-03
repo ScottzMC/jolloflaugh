@@ -14,7 +14,7 @@
                                     <div class="main-menu main-menu-padding-1 main-menu-lh-3 main-menu-hm4 main-menu-center">
                                         <nav>
                                             <ul>
-                                                <li><a class="active" style="font-size: 12px;" href="< ?php echo site_url('jollof_n_laugh'); ?>">HOME </a></li>
+                                                <li><a class="active" style="font-size: 12px;" href="<?php echo site_url('jollof_n_laugh'); ?>">HOME </a></li>
                                                 <?php if($this->session->userdata('urole') == 'User'){ ?>
                                                     <li><a style="font-size: 12px;" href="<?php echo site_url('jollof_n_laugh/logout'); ?>">Logout </a></li>
                                                 <?php }else if($this->session->userdata('urole') == 'Admin'){ ?>
@@ -86,7 +86,7 @@
                         <!-- mobile menu start -->
                         <nav>
                             <ul class="mobile-menu">
-                                <li class="menu-item-has-children"><a href="< ?php echo site_url('jollof_n_laugh'); ?>">Home</a></li>
+                                <li class="menu-item-has-children"><a href="<?php echo site_url('jollof_n_laugh'); ?>">Home</a></li>
                             <?php if($this->session->userdata('urole') == 'User'){ ?>
                                 <li><a style="font-size: 12px;" href="<?php echo site_url('jollof_n_laugh/logout'); ?>">Logout </a></li>
                             <?php }else if($this->session->userdata('urole') == 'Admin'){ ?>
