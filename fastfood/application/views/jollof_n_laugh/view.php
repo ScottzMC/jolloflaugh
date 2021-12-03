@@ -180,6 +180,7 @@
                     
                     <div id="product-0" class="tab-pane active">
                         <div class="row">
+			<div><?php echo $this->session->flashdata('status'); ?></div>
                         <?php if(!empty($vegan)){ foreach($vegan as $veg){ ?>
                         
                             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
@@ -252,6 +253,7 @@
                     
                     <div id="product-0" class="tab-pane active">
                         <div class="row">
+			<div><?php echo $this->session->flashdata('status'); ?></div>
                         <?php if(!empty($rice)){ foreach($rice as $rc){ ?>
                         
                             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
@@ -324,6 +326,7 @@
                     
                     <div id="product-0" class="tab-pane active">
                         <div class="row">
+			<div><?php echo $this->session->flashdata('status'); ?></div>
                         <?php if(!empty($side)){ foreach($side as $sde){ ?>
                         
                             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
@@ -396,6 +399,7 @@
                     
                     <div id="product-0" class="tab-pane active">
                         <div class="row">
+			<div><?php echo $this->session->flashdata('status'); ?></div>
                         <?php if(!empty($dessert)){ foreach($dessert as $des){ ?>
                         
                             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
