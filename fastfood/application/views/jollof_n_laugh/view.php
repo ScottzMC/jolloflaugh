@@ -107,6 +107,7 @@
                     
                     <div id="product-0" class="tab-pane active">
                         <div class="row">
+			<div><?php echo $status; ?></div>
                         <?php if(!empty($stews)){ foreach($stews as $stw){ ?>
                         
                             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
