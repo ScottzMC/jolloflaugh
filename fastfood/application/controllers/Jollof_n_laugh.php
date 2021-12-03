@@ -12,7 +12,7 @@
     		$data['message'] = $this->session->flashdata('message');
     	  }
 		
-	  if(!empty($status)){
+	  if(!empty($status) && $status == "added"){
 	    $data['status'] = '<p><div class="alert alert-success" role="alert">Added to cart</div></p>';
 	  }else{
 	    $data['status'] = $this->session->flashdata('message');
@@ -419,7 +419,7 @@
             'image' => $this->input->post('image')
           );
 	 
-	 $status = "Success";
+	 $status = "added";
     
          $this->cart->insert($insert_items);
 	 redirect('jollof_n_laugh/'.$status);
