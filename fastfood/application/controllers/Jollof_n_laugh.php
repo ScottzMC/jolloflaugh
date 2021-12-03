@@ -4,7 +4,7 @@
         
         // Home
         
-        public function index($status = null){
+        public function index($status){
             
           if(!$this->cart->contents()){
     		$data['message'] = '<p><div class="alert alert-danger" role="alert">Your cart is empty!</div></p>';
