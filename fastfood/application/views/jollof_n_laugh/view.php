@@ -122,7 +122,7 @@
                                         <?php // if(!empty($session_email)){ ?>
                                         <div class="pro-details-action-wrap">
                                             <div class="pro-add-to-cart">
-                                                <form action="https://jollofnlaugh.com/fastfood/jollof_n_laugh/add_cart" method="POST">
+                                                <form action="<?php echo base_url('jollof_n_laugh/add_cart'); ?>" method="POST">
                                                     <input type="hidden" name="id" value="<?php echo $stw->id; ?>">
                                                     <input type="hidden" name="code" value="<?php echo $stw->code; ?>">
                                                     <input type="hidden" name="title" value="<?php echo $stw->title; ?>">
@@ -145,7 +145,7 @@
                                         <?php //if(!empty($session_email)){ ?>
                                         <div class="pro-details-action-wrap">
                                             <div class="pro-add-to-cart">
-                                                <form action="https://jollofnlaugh.com/fastfood/jollof_n_laugh/add_cart" method="POST">
+                                                <form action="<?php echo base_url('jollof_n_laugh/add_cart'); ?>" method="POST">
                                                     <input type="hidden" name="id" value="<?php echo $stw->id; ?>">
                                                     <input type="hidden" name="code" value="<?php echo $stw->code; ?>">
                                                     <input type="hidden" name="title" value="<?php echo $stw->title; ?>">
