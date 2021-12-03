@@ -414,7 +414,9 @@
           );
 	     
          $this->cart->insert($insert_items);
-	 $statusMsg = '<p><div class="alert alert-success">Added to cart</div></p>';
+	 $statusMsg = '<p><div class="alert alert-success">Added to cart <button type="button" class="close" aria-label="Close">
+  	<span aria-hidden="true">&times;</span>
+	</button></div></p>';
          $this->session->set_flashdata('status', $statusMsg);
 	 redirect('jollof_n_laugh');
 	 /*if(!$this->cart->contents()){
