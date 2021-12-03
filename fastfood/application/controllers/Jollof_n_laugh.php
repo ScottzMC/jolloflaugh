@@ -414,7 +414,8 @@
           );
 	     
          $this->cart->insert($insert_items);
-	 $this->session->flashdata('status');
+	 $statusMsg = '<p><div class="alert alert-success">Added to cart</div></p>';
+         $this->session->set_flashdata('status', $statusMsg);
 	 redirect('jollof_n_laugh');
 	 /*if(!$this->cart->contents()){
     		$data['message'] = '<p><div class="alert alert-danger" role="alert">Your cart is empty!</div></p>';
