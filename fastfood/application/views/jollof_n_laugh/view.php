@@ -17,12 +17,12 @@
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/vendor/cerebrisans.css'); ?>">
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/vendor/simple-line-icons.css'); ?>">
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/vendor/elegant.css'); ?>">
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/plugins/nice-select.css'); ?>">
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/plugins/slick.css'); ?>">
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/style.min.css'); ?>">
+    <link rel="stylesheet" href="https://jollofnlaugh.com/fastfood/assets/css/vendor/cerebrisans.css">
+    <link rel="stylesheet" href="https://jollofnlaugh.com/fastfood/assets/css/vendor/simple-line-icons.css">
+    <link rel="stylesheet" href="https://jollofnlaugh.com/fastfoodassets/css/vendor/elegant.css">
+    <link rel="stylesheet" href="https://jollofnlaugh.com/fastfoodassets/css/plugins/nice-select.css">
+    <link rel="stylesheet" href="https://jollofnlaugh.com/fastfoodassets/css/plugins/slick.css">
+    <link rel="stylesheet" href="https://jollofnlaugh.com/fastfoodassets/css/style.min.css">
 
     <!-- Use the minified version files listed below for better performance and remove the files listed above
     <link rel="stylesheet" href="assets/css/vendor/vendor.min.css">
@@ -464,57 +464,18 @@
 ============================================ -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <script src="<?php echo base_url('assets/js/vendor/bootstrap.bundle.min.js'); ?>"></script>
-    <script src="<?php echo base_url('assets/js/plugins/slick.js'); ?>"></script>
-    <script src="<?php echo base_url('assets/js/plugins/jquery.syotimer.min.js'); ?>"></script>
-    <script src="<?php echo base_url('assets/js/plugins/jquery.nice-select.min.js'); ?>"></script>
-    <script src="<?php echo base_url('assets/js/plugins/wow.js'); ?>"></script>
-    <script src="<?php echo base_url('assets/js/plugins/scrollup.js'); ?>"></script>
+    <script src="https://jollofnlaugh.com/fastfood/assets/js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="https://jollofnlaugh.com/fastfood/assets/js/plugins/slick.js"></script>
+    <script src="https://jollofnlaugh.com/fastfood/assets/js/plugins/jquery.syotimer.min.js"></script>
+    <script src="https://jollofnlaugh.com/fastfood/assets/js/plugins/jquery.nice-select.min.js"></script>
+    <script src="https://jollofnlaugh.com/fastfood/assets/js/plugins/wow.js"></script>
+    <script src="https://jollofnlaugh.com/fastfood/assets/js/plugins/scrollup.js"></script>
 
     <!-- Use the minified version files listed below for better performance and remove the files listed above
 <script src="assets/js/vendor/vendor.min.js"></script>
 <script src="assets/js/plugins/plugins.min.js"></script>  -->
     <!-- Main JS -->
-    <script src="<?php echo base_url('assets/js/main.js'); ?>"></script>
-
-    <script>
-    var timeSlots = [];
-    <?php 
-    $time = strtotime('09:00');    
-    for($t=0;$t<=18;$t++) { 
-        $slot = date("H:i", strtotime('+'.(30*$t).' minutes', $time));
-    ?>
-        timeSlots[<?php echo $t;?>] = '<?php echo $slot; ?>';
-    <?php } ?>
-    $('#delivery_date').change(function(){
-        $('#num_time').html('');
-        var ddate = $(this).val();
-        var todayObj = new Date();
-        var ddateObj = new Date(ddate);
-        var selDate = ddateObj.getMonth()+'-'+ddateObj.getDate()+'-'+ddateObj.getYear();
-        var todayDate = todayObj.getMonth()+'-'+todayObj.getDate()+'-'+todayObj.getYear();
-        var todayTime = todayObj.getHours() +':'+ todayObj.getMinutes();
-        if(todayDate==selDate) {
-            for(var t=0;t<timeSlots.length;t++) {
-                if(todayTime<timeSlots[t]) {
-                    $('#num_time').append($('<option>', { 
-                        value: timeSlots[t],
-                        text : timeSlots[t] 
-                    }));
-                }
-            }
-        }
-        else if(selDate>todayDate) {
-            for(var t=0;t<timeSlots.length;t++) {
-                $('#num_time').append($('<option>', { 
-                    value: timeSlots[t],
-                    text : timeSlots[t] 
-                }));
-            }
-        }
-    });
-    $('#delivery_date').trigger('change');
-    </script>
+    <script src="https://jollofnlaugh.com/fastfood/assets/js/main.js"></script>
 </body>
 
 </html>
