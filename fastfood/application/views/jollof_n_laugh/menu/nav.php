@@ -53,7 +53,7 @@
                         <div class="col-5">
                             <div class="mobile-logo">
                                 <a href="<?php echo site_url('jollof_n_laugh'); ?>">
-                                    <img alt="logo" src="<?php echo base_url('assets/images/logo/logo.png'); ?>">
+                                    <img alt="logo" src="<?php echo base_url('assets/images/logo/logo-vr.png'); ?>">
                                 </a>
                             </div>
                         </div>
