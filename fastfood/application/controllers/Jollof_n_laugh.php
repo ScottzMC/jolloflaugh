@@ -482,9 +482,7 @@
                 );
                 $update = $this->cart->update($data);
             }
-	    
-	    redirect('jollof_n_laugh');
-            
+	                
             // Return response
             echo $update?'ok':'err';
         }
