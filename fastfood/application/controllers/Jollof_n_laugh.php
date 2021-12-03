@@ -505,7 +505,7 @@
       
       //if(isset($submit_btn)){
           
-            $shuffle = str_shuffle("ABCDEFGH-TUVXY");
+            $shuffle = str_shuffle("ABCDEFGHTUVXY");
             $unique = rand(00110, 90099);
             $order_code = $shuffle.$unique;
             $firstname = $this->input->post('firstname');
