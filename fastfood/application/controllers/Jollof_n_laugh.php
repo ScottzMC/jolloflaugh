@@ -414,13 +414,7 @@
           );
     
          $this->cart->insert($insert_items);
-         ?>
-         <script type="text/javascript">
-             alert('Added to Cart');
-             window.location.href="<?php echo site_url('jollof_n_laugh'); ?>";
-         </script> 
-         //redirect('jollof_n_laugh');
-         <?php
+	 redirect('jollof_n_laugh');
         }
     
         public function remove_cart($rowid){
