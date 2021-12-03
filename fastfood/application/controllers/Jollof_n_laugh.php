@@ -4,19 +4,13 @@
         
         // Home
         
-        public function index($status){
+        public function index(){
             
           if(!$this->cart->contents()){
     		$data['message'] = '<p><div class="alert alert-danger" role="alert">Your cart is empty!</div></p>';
     	  }else{
     		$data['message'] = $this->session->flashdata('message');
     	  }
-		
-	  if(!empty($status) && $status == "added"){
-	    $data['status'] = '<p><div class="alert alert-success" role="alert">Added to cart</div></p>';
-	  }else{
-	    $data['status'] = $this->session->flashdata('message');
-	  }
     	  
     	  $email = $this->session->userdata('uemail');
     	  
@@ -418,11 +412,9 @@
             'category' => $this->input->post('category'),
             'image' => $this->input->post('image')
           );
-	 
-	 $status = "added";
-    
+	     
          $this->cart->insert($insert_items);
-	 redirect('jollof_n_laugh/'.$status);
+	 redirect('jollof_n_laugh');
 	 /*if(!$this->cart->contents()){
     		$data['message'] = '<p><div class="alert alert-danger" role="alert">Your cart is empty!</div></p>';
     	  }else{
