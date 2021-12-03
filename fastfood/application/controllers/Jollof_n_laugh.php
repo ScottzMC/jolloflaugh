@@ -415,7 +415,7 @@
     
          $this->cart->insert($insert_items);
          ?>
-         <script>
+         <script type="text/javascript">
              alert('Added to Cart');
              window.location.href="<?php echo site_url('jollof_n_laugh'); ?>";
          </script> 
