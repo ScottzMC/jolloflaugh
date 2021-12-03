@@ -97,8 +97,8 @@
         </div>
         
         <div class="product-area pt-115 pb-80" style="margin-top: -50px;">
-	    <div><?php echo $this->session->flashdata('status'); ?></div>
             <div class="container">
+		<div><?php echo $this->session->flashdata('status'); ?></div>
                 <div class="section-title-tab-wrap mb-55">
                     <div class="section-title-4">
                         <h2>Stews</h2>
