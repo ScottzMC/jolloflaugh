@@ -1,5 +1,5 @@
 
-        <header class="header-area">
+        <header class="header-area" style="padding-top: 50px;">
             <div class="header-large-device section-padding-2">
                 <div class="header-bottom">
                     <div class="container-fluid">
