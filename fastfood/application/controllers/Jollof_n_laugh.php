@@ -541,17 +541,21 @@
             $order_details = $this->Jollof_n_laugh_model->insert_order_details($order_details_array);
             //$this->cart->destroy();
             
-            if($order_items){ ?>
-                <script>
+            if($order_items){ 
+		redirect('jollof_n_laugh/make_order_payment/'.$email.'/'.strtolower($order_code));
+	    ?>
+                <!--<script>
                     //alert('Order Successfully');
                     window.location.href="<?php echo site_url('jollof_n_laugh/make_order_payment/'.$email.'/'.strtolower($order_code)); ?>";
                     //window.location.href="<?php echo site_url('jollof_n_laugh'); ?>";
-                </script>
-      <?php }else{ ?>
-                <script>
+                </script>-->
+      <?php }else{ 
+		redirect('jollof_n_laugh');
+	    ?>
+                <!--<script>
                     alert('Could not process order');
                     window.location.href="<?php echo site_url('jollof_n_laugh'); ?>";
-                </script> 
+                </script>-->
     <?php } 
         //}
       }
@@ -635,12 +639,13 @@
              $this->cart->destroy();
 
             //$this->session->set_flashdata('success', 'Payment made successfully.');
+	    redirect('jollof_n_laugh/success');
             ?>
             
-            <script>
+            <!--<script>
                 //alert('Order was successful');
                 window.location.href="<?php echo site_url('jollof_n_laugh/success'); ?>";
-            </script>
+            </script>-->
     <?php }
     
         public function success(){
