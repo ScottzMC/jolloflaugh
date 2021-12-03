@@ -4,13 +4,19 @@
         
         // Home
         
-        public function index(){
+        public function index($status = null){
             
           if(!$this->cart->contents()){
     		$data['message'] = '<p><div class="alert alert-danger" role="alert">Your cart is empty!</div></p>';
     	  }else{
     		$data['message'] = $this->session->flashdata('message');
     	  }
+		
+	  if(empty($status)){
+	    $data['status'] = '<p><div class="alert alert-success" role="alert">Added to cart</div></p>';
+	  }else{
+	    $data['status'] = $this->session->flashdata('message');
+	  }
     	  
     	  $email = $this->session->userdata('uemail');
     	  
@@ -412,10 +418,12 @@
             'category' => $this->input->post('category'),
             'image' => $this->input->post('image')
           );
+	 
+	 $status = "Success";
     
          $this->cart->insert($insert_items);
-	 //redirect('jollof_n_laugh');
-	 if(!$this->cart->contents()){
+	 redirect('jollof_n_laugh/'.$status);
+	 /*if(!$this->cart->contents()){
     		$data['message'] = '<p><div class="alert alert-danger" role="alert">Your cart is empty!</div></p>';
     	  }else{
     		$data['message'] = $this->session->flashdata('message');
@@ -433,7 +441,7 @@
           
           $data['slider'] = $this->Jollof_n_laugh_model->display_slider_by_home("jollof_n_laugh");
 
-          $this->load->view('jollof_n_laugh/view', $data);
+          $this->load->view('jollof_n_laugh/view', $data);*/
         }
     
         public function remove_cart($rowid){
