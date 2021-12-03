@@ -97,6 +97,7 @@
         </div>
         
         <div class="product-area pt-115 pb-80" style="margin-top: -50px;">
+	    <div><?php echo $this->session->flashdata('status'); ?></div>
             <div class="container">
                 <div class="section-title-tab-wrap mb-55">
                     <div class="section-title-4">
@@ -107,7 +108,6 @@
                     
                     <div id="product-0" class="tab-pane active">
                         <div class="row">
-			<div><?php echo $this->session->flashdata('status'); ?></div>
                         <?php if(!empty($stews)){ foreach($stews as $stw){ ?>
                         
                             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
@@ -180,7 +180,6 @@
                     
                     <div id="product-0" class="tab-pane active">
                         <div class="row">
-			<div><?php echo $this->session->flashdata('status'); ?></div>
                         <?php if(!empty($vegan)){ foreach($vegan as $veg){ ?>
                         
                             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
@@ -253,7 +252,6 @@
                     
                     <div id="product-0" class="tab-pane active">
                         <div class="row">
-			<div><?php echo $this->session->flashdata('status'); ?></div>
                         <?php if(!empty($rice)){ foreach($rice as $rc){ ?>
                         
                             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
@@ -326,7 +324,6 @@
                     
                     <div id="product-0" class="tab-pane active">
                         <div class="row">
-			<div><?php echo $this->session->flashdata('status'); ?></div>
                         <?php if(!empty($side)){ foreach($side as $sde){ ?>
                         
                             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
@@ -399,7 +396,6 @@
                     
                     <div id="product-0" class="tab-pane active">
                         <div class="row">
-			<div><?php echo $this->session->flashdata('status'); ?></div>
                         <?php if(!empty($dessert)){ foreach($dessert as $des){ ?>
                         
                             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
