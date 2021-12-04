@@ -5,14 +5,18 @@ defined('_FEXEC') or die();
 ?>
 <?php
 
-		$check_restrict_customer="";
-		$customer_group_id=0;
-		$check_restrict_customer=" and ((p.restrict_to_customers='' OR ISNULL(p.restrict_to_customers)) AND (p.restrict_to_groups='' OR ISNULL(p.restrict_to_groups)))";
-		if($FSESSION->is_registered('customer_id'))
-		{
-			$customer_group_id=get_customer_group_id();
-			$check_restrict_customer=substr($check_restrict_customer,0,-1)." OR (p.restrict_to_customers like '%". tep_db_input($FSESSION->customer_id) ."%' OR p.restrict_to_groups like '%". tep_db_input($customer_group_id) ."%'))";
-		}
+		// $check_restrict_customer="";
+		// $customer_group_id=0;
+		// $check_restrict_customer=" and ((p.restrict_to_customers='' OR ISNULL(p.restrict_to_customers)) AND (p.restrict_to_groups='' OR ISNULL(p.restrict_to_groups)))";
+		// if($FSESSION->is_registered('customer_id'))
+		// {
+			// $customer_group_id=get_customer_group_id();
+			// $check_restrict_customer=substr($check_restrict_customer,0,-1)." OR (p.restrict_to_customers like '%". tep_db_input($FSESSION->customer_id) ."%' OR p.restrict_to_groups like '%". tep_db_input($customer_group_id) ."%'))";
+		// }
+		// if (($_SESSION['BoxOffice']== 999)or($_SESSION['customer_country_id']==999))	
+		//{
+		$check_restrict_customer='';
+		//}
 
 		$expires='';
 		// //We get the actual server date and time
@@ -52,10 +56,10 @@ defined('_FEXEC') or die();
 		p.restrict_to_groups,
 		p.product_type,
 		p.master_quantity 
-		from " . TABLE_PRODUCTS . " p join ".TABLE_PRODUCTS_TO_CATEGORIES . " p2c on p2c.products_id=p.products_id join ".TABLE_PRODUCTS_DESCRIPTION . " pd on pd.products_id=p.products_id where p.product_type !='P' and p.product_type !='L' and p.product_type !='Q' and p.products_id >'0' '" . $expires . "' and p2c.categories_id = '" . $cPath . "' and pd.language_id = '" . (int)$FSESSION->languages_id . "' '". $check_restrict_customer."' order by p.products_sort_order,p.products_id asc");
+		from " . TABLE_PRODUCTS . " p join ".TABLE_PRODUCTS_TO_CATEGORIES . " p2c on p2c.products_id=p.products_id join ".TABLE_PRODUCTS_DESCRIPTION . " pd on pd.products_id=p.products_id where p.product_type !='P' and p.product_type !='L' and p.product_type !='Q' and p.products_id >'0' '" . $expires . "' and p2c.categories_id = '" . $cPath . "' and pd.language_id = '" . (int)$FSESSION->languages_id . "' '". $check_restrict_customer."' order by p.products_price desc");
 		if(tep_db_num_rows($listing_query) > 0)
 		{	
-		//print_r($listing_query);
+		//print_r($listing_query); //,p.products_sort_order,p.products_id
 		$category_ga_query = tep_db_query("select categories_GA,categories_quantity_remaining from " . TABLE_CATEGORIES . " where categories_id = '" . $cPath. "' limit 1");
 
 			if (tep_db_num_rows($category_ga_query)) 
@@ -187,7 +191,7 @@ defined('_FEXEC') or die();
 			############################################################
 
 			
-		if(($status>0)&&($status!=8)&&(SHOW_GA_SOLDOUT=='yes'))
+		if(($status>0)&&($status!=8))
 		{ 
 			?>
 			
