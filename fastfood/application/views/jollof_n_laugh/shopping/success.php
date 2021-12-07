@@ -64,12 +64,14 @@
                         <div class="section-title-4">
                             <h1>Order was Successful</h1>
                             <h2>Please check your Email for Order details</h2>
+			    <br>
 			    <?php foreach($order_item as $order){ ?>
 			    <h4>Order ID: <b><?php echo $order->order_id; ?></b></h4>
                             <h4>Order Title: <b><?php echo $order->title; ?></b></h4>
                             <h4>Order Price: <b>£<?php echo $order->price; ?></b></h4>
                             <h4>Order Qty: <b>£<?php echo $order->quantity; ?></b></h4>
                             <h4>Order Email: <b><?php echo $order->email; ?></b></h4>
+			    <br>
 			    <?php } ?>
                         </div>
                         <br>
