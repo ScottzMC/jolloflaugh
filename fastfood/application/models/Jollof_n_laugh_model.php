@@ -128,7 +128,7 @@
     	 return $query;
       }
       
-      public function display_all_order_by_email($code){
+      public function display_all_order_by_code($code){
           $this->db->where('order_id', $code);
           return $this->db->get('order_items')->result();
       }
