@@ -547,7 +547,7 @@
 	    ?>
                 <!--<script>
                     //alert('Order Successfully');
-                    window.location.href="<?php echo site_url('jollof_n_laugh/make_order_payment/'.$email.'/'.strtolower($order_code)); ?>";
+                    window.location.href="<?php echo site_url('jollof_n_laugh/make_order_payment/'.strtolower($order_code)); ?>";
                     //window.location.href="<?php echo site_url('jollof_n_laugh'); ?>";
                 </script>-->
       <?php }else{ 
@@ -570,7 +570,7 @@
 		   }
           
            $data['menu'] = $this->Jollof_n_laugh_model->display_menu_options();
-           $data['order_item'] = $this->Jollof_n_laugh_model->display_all_order_by_email($order_code);
+           $data['order_item'] = $this->Jollof_n_laugh_model->display_all_order_by_code($order_code);
 
            $this->load->view('jollof_n_laugh/shopping/payment', $data);
 
@@ -596,7 +596,6 @@
              $email = $this->input->post('customer_email');
 
              $subject = "Order Notification";
-             $order_item = $this->Jollof_n_laugh_model->display_all_order_by_email($customer_email, $order_id);
              
              if($cart = $this->cart->contents()):
     			foreach ($cart as $item):
@@ -641,7 +640,7 @@
              $this->cart->destroy();
 
             //$this->session->set_flashdata('success', 'Payment made successfully.');
-	    redirect('jollof_n_laugh/success');
+	    redirect('jollof_n_laugh/success/'.$order_id);
             ?>
             
             <!--<script>
@@ -650,7 +649,7 @@
             </script>-->
     <?php }
     
-        public function success(){
+        public function success($order_code){
             if(!$this->cart->contents()){
 			 $data['message'] = '<p><div class="alert alert-danger" role="alert">Your cart is empty!</div></p>';
 		   }else{
@@ -658,6 +657,7 @@
 		   }
           
            $data['menu'] = $this->Jollof_n_laugh_model->display_menu_options();
+           $data['order_item'] = $this->Jollof_n_laugh_model->display_all_order_by_code($order_code);
            
            $this->load->view('jollof_n_laugh/shopping/success', $data);
         }
