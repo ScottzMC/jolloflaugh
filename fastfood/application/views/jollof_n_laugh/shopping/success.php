@@ -62,20 +62,17 @@
                 <div class="border-bottom-7 hm4-pb-100">
                     <div class="section-title-tab-wrap mb-55">
                         <div class="section-title-4">
-                            <?php foreach($order_item as $order){} ?>
                             <h1>Order was Successful</h1>
                             <h2>Please check your Email for Order details</h2>
-                        </div>
-                        <br>
-                        <?php foreach($order_item as $order){ ?>
-                        <div class="section-title-4">
-                            <h4>Order ID: <b><?php echo $order->order_id; ?></b></h4>
+			    <?php foreach($order_item as $order){ ?>
+			    <h4>Order ID: <b><?php echo $order->order_id; ?></b></h4>
                             <h4>Order Title: <b><?php echo $order->title; ?></b></h4>
                             <h4>Order Price: <b>£<?php echo $order->price; ?></b></h4>
                             <h4>Order Qty: <b>£<?php echo $order->quantity; ?></b></h4>
                             <h4>Order Email: <b><?php echo $order->email; ?></b></h4>
+			    <?php } ?>
                         </div>
-                        <?php } ?>  
+                        <br>
                     </div>
                     
                 </div>
