@@ -159,7 +159,7 @@
                             <div class="panel-heading display-table">
                                 <div class="row display-tr">
                                     <?php foreach($order_item as $order){}?>
-                                    <h3 class="panel-title display-td" style="width: auto;">Payment <?php echo $order->email; ?> Details</h3>
+                                    <h3 class="panel-title display-td" style="width: auto;">Payment Details</h3>
                                 </div>                    
                             </div>
             
