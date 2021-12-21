@@ -128,6 +128,17 @@
     	 return $query;
       }
       
+      public function insert_order_stripe_charge($data){
+          $query = $this->db->insert('stripe_charge', $data);
+    	  return $query;
+      }
+      
+      public function update_stripe_charge($order_code, $array){
+          $this->db->where('order_id', $order_code);
+          $query = $this->db->update('order_items', $array);
+          return $query;
+      }
+      
       public function display_all_order_by_code($code){
           $this->db->where('order_id', $code);
           return $this->db->get('order_items')->result();
@@ -160,6 +171,11 @@
       public function insert_message($data){
         $query = $this->db->insert('message', $data);
         return $query;
+      }
+      
+      public function display_all_seating(){
+          $query = $this->db->get('seating')->result();
+          return $query;
       }
       
       // End of Shopping
@@ -284,6 +300,21 @@
      }
       
       // End of Food 
+      
+      // Voucher 
+      
+      public function add_temp_vouchers($data){
+        $query = $this->db->insert('temp_discount', $data);
+        return $query;
+      }
+      
+      public function remove_voucher($id){
+        $query = $this->db->query("DELETE FROM temp_discount WHERE id = '$id' ");
+        return $query;
+      }
+        
+      
+      // End of Voucher 
     }
 
 ?>
