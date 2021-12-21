@@ -404,8 +404,8 @@ function convertToOrderFormat($timestamp){
                     <p id='ctb'></p>
                     <p id='ctc'></p>
                     <p id='ctd'></p>
-				
-				<!-- Row -->
+
+				<!-- Row 
 				<div class="row">
 					<div class="col-sm-12">
 						<div class="panel panel-default card-view">
@@ -423,6 +423,7 @@ function convertToOrderFormat($timestamp){
 												<thead>
 													<tr>
 														<th>OID</th>
+														<th>Charge ID</th>
 														<th>FullName</th>
 														<th>Food Name</th>
 														<th>Price</th>
@@ -435,6 +436,7 @@ function convertToOrderFormat($timestamp){
                                                         <th>Action</th>
                                                         <th>Action</th>
                                                         <th>Action</th>
+                                                        <th>Refund</th>
                                                         <th>Action</th>
 													</tr>
 												</thead>
@@ -442,6 +444,7 @@ function convertToOrderFormat($timestamp){
                                                 <?php if(!empty($pending)){ foreach($pending as $pend){ ?>
 													<tr>
 														<td>#<?php echo $pend->order_id; ?></td>
+														<td><?php echo $pend->charge_id; ?></td>
 														<td><?php echo $pend->firstname; ?> <?php echo $pend->lastname; ?></td>
 														<td><?php echo str_replace('-', ' ', $pend->title); ?></td>
                                                         <td>&pound;<?php echo $pend->price; ?></td>
@@ -484,11 +487,19 @@ function convertToOrderFormat($timestamp){
                                                                 <i class="icon-check"></i>
                                                             </button>
                                                         </td>
+                                                        <td>
+                                                            <form action="<?php echo base_url('admin/make_refund'); ?>" method="POST">
+                                                                <input type="hidden" name="charge_id">
+    													        <button class="btn btn-danger btn-icon-anim btn-square" type="submit" title="Refunded">
+                                                                    <i class="icon-check"></i>
+                                                                </button>
+                                                            </form>
+                                                        </td>
                                                         <!--<td>
 													     <a href="<?php echo site_url('admin/pending/'.$pend->id); ?>" class="btn btn-info btn-icon-anim btn-square" title="View Order">
                                                            <i class="icon-check"></i>
                                                          </a>
-                                                        </td>-->
+                                                        </td>
                                                         <td>
                             							  <button class="btn btn-danger btn-icon-anim btn-square" onclick="deleteorder(<?php echo $pend->id; ?>)" title="Delete Order">
                                                            <i class="icon-trash"></i>
@@ -507,7 +518,7 @@ function convertToOrderFormat($timestamp){
 				</div>
 				<!-- /Row -->
 				
-				<!-- Row -->
+				<!-- Row 
 				<div class="row">
 					<div class="col-sm-12">
 						<div class="panel panel-default card-view">
@@ -575,7 +586,7 @@ function convertToOrderFormat($timestamp){
 													     <a href="<?php echo site_url('admin/delivering/'.$delving->id); ?>" class="btn btn-info btn-icon-anim btn-square" title="View Order">
                                                            <i class="icon-check"></i>
                                                          </a>
-                                                        </td>-->
+                                                        </td>
                                                         <td>
 													        <button class="btn btn-info btn-icon-anim btn-square" onclick="deliveringorder(<?php echo $delving->id; ?>)" title="Delivering Order">
                                                                 <i class="icon-check"></i>
@@ -609,7 +620,7 @@ function convertToOrderFormat($timestamp){
 				</div>
 				<!-- /Row -->
 
-				<!-- Row -->
+				<!-- Row 
 				<div class="row">
 					<div class="col-sm-12">
 						<div class="panel panel-default card-view">
@@ -652,23 +663,9 @@ function convertToOrderFormat($timestamp){
                                                         <td style="text-align: center;"><?php echo $delved->quantity; ?></td>
                                                         <td><?php echo $delved->seat_type; ?></td>
                             							<td>
-                                                          <?php if($delved->status == "Pending"){ ?>
-                                                          <span class="label label-info">
+                                                          <span class="label label-success">
                                                             <?php echo $delved->status; ?>
                                                           </span>
-                                                          <?php }else if($delved->status == "Delivering"){ ?>
-                                                          <span class="label label-warning">
-                                                            <?php echo $pend->status; ?>
-                                                          </span>
-                                                            <?php }else if($delved->status == "Delivered"){ ?>
-                                                          <span class="label label-success">
-                                                            <?php echo $pend->status; ?>
-                                                          </span>
-                                                            <?php }else if($delved->status == "Cancelled"){ ?>
-                                                          <span class="label label-danger">
-                                                            <?php echo $pend->status; ?>
-                                                          </span>
-                                                            <?php } ?>
                             							</td>
                             							<td><?php echo $delved->order_notes; ?></td>
                                                         <td><?php echo convertToOrderFormat($delved->created_time); ?></td>
@@ -692,7 +689,7 @@ function convertToOrderFormat($timestamp){
 													     <a href="<?php echo site_url('admin/pending/'.$delved->id); ?>" class="btn btn-info btn-icon-anim btn-square" title="View Order">
                                                            <i class="icon-check"></i>
                                                          </a>
-                                                        </td>-->
+                                                        </td>
                                                         <td>
                             							  <button class="btn btn-danger btn-icon-anim btn-square" onclick="deleteorder(<?php echo $delved->id; ?>)" title="Delete Order">
                                                            <i class="icon-trash"></i>

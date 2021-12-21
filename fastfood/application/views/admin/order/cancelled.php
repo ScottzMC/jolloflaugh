@@ -20,7 +20,7 @@ function convertToOrderFormat($timestamp){
 <head>
     <meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<title>View All Delivering Orders || Admin Fast Food</title>
+	<title>View All Cancelled Orders || Admin Fast Food</title>
 
 </head>
 
@@ -38,7 +38,7 @@ function convertToOrderFormat($timestamp){
 					  <ol class="breadcrumb">
 						<li><a href="<?php echo site_url('admin/dashboard'); ?>">Dashboard</a></li>
 						<li><a href="#"><span>Orders</span></a></li>
-						<li class="active"><span>Delivering Orders</span></li>
+						<li class="active"><span>Cancelled Orders</span></li>
 					  </ol>
 					</div>
 					<!-- /Breadcrumb -->
@@ -46,6 +46,15 @@ function convertToOrderFormat($timestamp){
 				<!-- /Title -->
 
                 <script>
+                      function deliveringorder(id){
+                        var order_id = id;
+                        if(confirm("Are you sure you to deliver this order")){
+                        $.post('<?php echo base_url('admin/delivering_order'); ?>', {"order_id": order_id}, function(data){
+                          location.reload();
+                          $('#cta').html(data)
+                          });
+                        }
+                      }
                       
                       function deliveredorder(id){
                         var order_id = id;
@@ -79,6 +88,7 @@ function convertToOrderFormat($timestamp){
                 
                     </script>
                 
+                    <p id='cta'></p>
                     <p id='ctb'></p>
                     <p id='ctc'></p>
                     <p id='ctd'></p>
@@ -89,7 +99,7 @@ function convertToOrderFormat($timestamp){
 						<div class="panel panel-default card-view">
 							<div class="panel-heading">
 								<div class="pull-left">
-									<h6 class="panel-title txt-dark">Delivering orders</h6>
+									<h6 class="panel-title txt-dark">Food orders</h6>
 								</div>
 								<div class="clearfix"></div>
 							</div>
@@ -117,69 +127,50 @@ function convertToOrderFormat($timestamp){
 														<!--<th>Delivery Category</th>-->
                                                         <th>Time</th>
                                                         <th>Date</th>
-                                                        <th>Delivered</th>
-                                                        <th>Cancel</th>
                                                         <th>Refund</th>
                                                         <th>Delete</th>
 													</tr>
 												</thead>
 												
 												 <tbody>
-                                                    <?php if(!empty($delivering)){ foreach($delivering as $delving){ ?>
-                                                    <!--<form action="<?php echo base_url('admin/delivering/'.$delving->id); ?>" method="POST">
-                                                    
-                                                    <input type="hidden" name="order_id" value="<?php echo $delving->order_id; ?>">
-                                                    <input type="hidden" name="title" value="<?php echo $delving->title; ?>">
-                                                    <input type="hidden" name="price" value="<?php echo $delving->price; ?>">
-                                                    <input type="hidden" name="quantity" value="<?php echo $delving->quantity; ?>">
-                                                    <input type="hidden" name="customer_email" value="<?php echo $delving->email; ?>">-->
+                                                    <?php if(!empty($cancelled)){ foreach($cancelled as $cancel){ ?>
 													<tr>
-													    <td><input type="checkbox" class="checkbox" value="<?php echo $delving->id; ?>" /></td>
-														<td>#<?php echo $delving->order_id; ?></td>
-														<td><?php echo $delving->charge_id; ?></td>
-														<td><?php echo $delving->firstname; ?> <?php echo $delving->lastname; ?></td>
-                                                        <!--<td><?php echo $delving->telephone; ?></td>
-                                                        <td><?php echo $delving->address; ?></td>
-                                                        <td><?php echo $delving->postcode; ?></td>
-                                                        <td><?php echo $delving->town; ?></td>-->
-                            							<td><?php echo str_replace('-', ' ', $delving->title); ?></td>
-                                                        <td>&pound;<?php echo $delving->price; ?></td>
-                                                        <td style="text-align: center;"><?php echo $delving->quantity; ?></td>
-                                                        <td>&pound;<?php echo $delving->quantity * $delving->price; ?></td>
+													    <td><input type="checkbox" class="checkbox" value="<?php echo $cancel->id; ?>" /></td>
+														<td>#<?php echo $cancel->order_id; ?></td>
+														<td><?php echo $cancel->charge_id; ?></td>
+														<td><?php echo $cancel->firstname; ?> <?php echo $cancel->lastname; ?></td>
+                                                        <!--<td><?php echo $cancel->telephone; ?></td>
+                                                        <td><?php echo $cancel->address; ?></td>
+                                                        <td><?php echo $cancel->postcode; ?></td>
+                                                        <td><?php echo $cancel->town; ?></td>-->
+                            							<td><?php echo str_replace('-', ' ', $cancel->title); ?></td>
+                                                        <td>&pound;<?php echo $cancel->price; ?></td>
+                                                        <td style="text-align: center;"><?php echo $cancel->quantity; ?></td>
+                                                        <td>&pound;<?php echo $cancel->quantity * $cancel->price; ?></td>
                             							<td>
-                                                          <span class="label label-warning">
-                                                            <?php echo $delving->status; ?>
+                                                          <span class="label label-danger">
+                                                            <?php echo $cancel->status; ?>
                                                           </span>
 														</td>
-														<td><?php echo $delving->order_notes; ?></td>
-														<!--<td><?php echo $delving->delivery_category; ?></td>-->
-                                                        <td><?php echo convertToOrderFormat($delving->created_time); ?></td>
-                                                        <td><?php echo date("j M Y", strtotime($delving->created_date)); ?></td>
-                                                        <td>
-													     <button type="button" name="delivered" onclick="deliveredorder(<?php echo $delving->id; ?>)" class="btn btn-success btn-icon-anim btn-square" title="Delivered Order">
-                                                           <i class="icon-check"></i>
-                                                         </button>
-                                                        </td>
-                                                        <td>
-													     <button type="button" name="cancelled" onclick="cancelorder(<?php echo $delving->id; ?>)" class="btn btn-danger btn-icon-anim btn-square" title="Cancelled Order">
-                                                            <i class="icon-trash"></i>
-                                                          </button>
-                                                        </td>
+														<td><?php echo $cancel->order_notes; ?></td>
+														<!--<td><?php echo $cancel->delivery_category; ?></td>-->
+                                                        <td><?php echo convertToOrderFormat($cancel->created_time); ?></td>
+                                                        <td><?php echo date("j M Y", strtotime($cancel->created_date)); ?></td>
                                                         <td>
                                                             <form action="<?php echo base_url('admin/make_refund'); ?>" method="POST">
-                                                                <input type="hidden" name="charge_id" value="<?php echo $delving->charge_id; ?>">
+                                                                <input type="hidden" name="charge_id" value="<?php echo $cancel->charge_id; ?>">
     													        <button class="btn btn-info btn-icon-anim btn-square" type="submit" title="Refunded">
                                                                     <i class="icon-check"></i>
                                                                 </button>
                                                             </form>
                                                         </td>
                                                         <td>
-                            							  <button class="btn btn-danger btn-icon-anim btn-square" onclick="deleteorder(<?php echo $delving->id; ?>)" title="Delete Order">
+                            							  <button type="button" class="btn btn-danger btn-icon-anim btn-square" onclick="deleteorder(<?php echo $cancel->id; ?>)" title="Delete Order">
                                                            <i class="icon-trash"></i>
                                                          </button>
                                                         </td>
 													</tr>
-											      </form>
+											      <!--</form>-->
                                                 <?php } }else{ echo ''; } ?>
                                                 <a href="<?php echo site_url('admin/dashboard'); ?>" style="width: 150px;" class="btn btn-danger btn-icon-anim btn-square" title="Go back">
                                                     Go to Dashboard
@@ -187,12 +178,6 @@ function convertToOrderFormat($timestamp){
 												</tbody>
 											</table>
 											<div style="padding-bottom: 50px;">
-                                                <button type="button" name="delivered_all" id="delivered_all" style="width: 150px;" class="btn btn-success btn-icon-anim btn-square" title="Delivered">
-                                                    Delivered
-                                                </button>
-                                                <button type="button" name="cancelled_all" id="cancelled_all" style="width: 150px;" class="btn btn-danger btn-icon-anim btn-square" title="Cancelled">
-                                                    Cancelled
-                                                </button>
                                                 <button type="button" name="delete_all" id="delete_all" style="width: 150px;" class="btn btn-danger btn-icon-anim btn-square" title="Delete">
                                                     Delete
                                                 </button>
@@ -244,48 +229,6 @@ function convertToOrderFormat($timestamp){
        
        $.ajax({
         url:"<?php echo base_url(); ?>admin/delete_all",
-        method:"POST",
-        data:{checkbox_value:checkbox_value},
-        success:function(){
-         $('.removeRow').fadeOut(1500);
-        }
-       })
-      }else{
-       alert('Select at least one order item');
-      }
-     });
-     
-     $('#delivered_all').click(function(){
-      var checkbox = $('.checkbox:checked');
-      if(checkbox.length > 0){
-       var checkbox_value = [];
-       $(checkbox).each(function(){
-        checkbox_value.push($(this).val());
-       });
-       
-       $.ajax({
-        url:"<?php echo base_url(); ?>admin/delivered_all",
-        method:"POST",
-        data:{checkbox_value:checkbox_value},
-        success:function(){
-         $('.removeRow').fadeOut(1500);
-        }
-       })
-      }else{
-       alert('Select at least one order item');
-      }
-     });
-     
-     $('#cancelled_all').click(function(){
-      var checkbox = $('.checkbox:checked');
-      if(checkbox.length > 0){
-       var checkbox_value = [];
-       $(checkbox).each(function(){
-        checkbox_value.push($(this).val());
-       });
-       
-       $.ajax({
-        url:"<?php echo base_url(); ?>admin/cancelled_all",
         method:"POST",
         data:{checkbox_value:checkbox_value},
         success:function(){

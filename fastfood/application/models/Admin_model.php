@@ -226,9 +226,9 @@
     
     public function display_all_delivering_order_by_id($id){
       $this->db->order_by('created_date', 'ASC');
-      $this->db->where('status', 'Pending');
+      $this->db->where('status', 'Delivering');
       $this->db->where('id', $id);
-      $query = $this->db->get('Delivering')->result();
+      $query = $this->db->get('order_items')->result();
       return $query;
     }
     
@@ -241,9 +241,9 @@
     
     public function display_all_delivered_order_by_id($id){
       $this->db->order_by('created_date', 'ASC');
-      $this->db->where('status', 'Pending');
+      $this->db->where('status', 'Delivered');
       $this->db->where('id', $id);
-      $query = $this->db->get('Delivered')->result();
+      $query = $this->db->get('order_items')->result();
       return $query;
     }
     
@@ -252,6 +252,19 @@
       $this->db->where('status', 'Cancelled');
       $query = $this->db->get('order_items')->result();
       return $query;
+    }
+    
+    public function display_all_refunded_orders(){
+      $this->db->order_by('created_date', 'ASC');
+      $this->db->where('status', 'Refunded');
+      $query = $this->db->get('order_items')->result();
+      return $query;
+    }
+    
+    public function update_order_items_to_refund($id, $array){
+        $this->db->where('charge_id', $id);
+        $query = $this->db->update('order_items', $array);
+        return $query;
     }
     
     public function display_all_order_details(){
@@ -526,6 +539,37 @@
     }
 
      // End of Edit Menu
+     
+     // Seating 
+     
+     public function display_seating(){
+      $query = $this->db->get('seating')->result();
+      return $query;
+    }
+
+    public function display_seating_by_id($id){
+      $this->db->where('id', $id);
+      $query = $this->db->get('seating')->result();
+      return $query;
+    }
+
+    public function insert_seating($data){
+      $query = $this->db->insert('seating', $data);
+      return $query;
+    }
+    
+    public function update_seating($id, $title){
+      $query = $this->db->query("UPDATE seating SET title = '$title' WHERE id = '$id' ");
+      return $query;
+    }
+    
+    public function delete_seating($id){
+      $this->db->where('id', $id);
+      $query = $this->db->delete("seating");
+      return $query;
+    }
+     
+     // End of Seating
      
      // Edit Side Meal
      

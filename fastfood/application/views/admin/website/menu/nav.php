@@ -39,7 +39,7 @@
     <div class="fixed-sidebar-left">
       <ul class="nav navbar-nav side-nav nicescroll-bar">
         <li>
-          <a href="<?php echo site_url('food_order'); ?>">
+          <a href="<?php echo site_url('home'); ?>">
             <i class="icon-grid mr-10"></i>Back To Shop
           </a>
         </li>
@@ -146,6 +146,9 @@
             <li>
               <a href="<?php echo site_url('admin/side_drink'); ?>">Edit Side Drink</a>
             </li>
+            <li>
+              <a href="<?php echo site_url('admin/seating'); ?>">Edit Seating</a>
+            </li>
             <!--<li>
               <a href="<?php echo site_url('admin/edit/faq'); ?>">Edit FAQ</a>
             </li>
@@ -164,7 +167,7 @@
           </ul>
         </li>
         
-        <!--<li>
+         <li>
           <a href="javascript:void(0);" data-toggle="collapse" data-target="#order_dr">
             <i class="icon-grid mr-10"></i>Orders
             <span class="pull-right">
@@ -181,8 +184,14 @@
             <li>
               <a href="<?php echo site_url('admin/delivered'); ?>">Delivered Orders</a>
             </li>
+            <li>
+              <a href="<?php echo site_url('admin/cancelled'); ?>">Cancelled Orders</a>
+            </li>
+            <li>
+              <a href="<?php echo site_url('admin/refunded'); ?>">Refunded Orders</a>
+            </li>
           </ul>
-        </li>-->
+        </li>
         
         <!--<li>
           <a href="<?php echo site_url('admin/message_grid'); ?>">
