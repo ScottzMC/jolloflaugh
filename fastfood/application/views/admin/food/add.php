@@ -111,7 +111,7 @@
 																<input type="checkbox" name="days[]" class="" value="Saturday"> Saturday<br>
 																<input type="checkbox" name="days[]" class="" value="Sunday"> Sunday<br>
 															</div>
-														</div>
+														</div>-->
 														<div class="form-group">
 															<label class="control-label mb-10">Stock</label>
 															<div class="input-group">
@@ -119,7 +119,7 @@
 																<input type="radio" name="stock" class="" value="No"> No<br>
 															</div>
 														</div>
-														<div class="form-group">
+														<!--<div class="form-group">
 															<label class="control-label mb-10">Meal Voucher</label>
 															<div class="input-group">
 																<input type="radio" name="meal_voucher" class="" value="Yes"> Yes<br>
