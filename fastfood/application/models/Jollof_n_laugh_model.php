@@ -6,6 +6,7 @@
       
       public function display_meal_for_rice(){
           $this->db->where('category', 'Rice');
+          $this->db->where('stock', 'Yes');
           $this->db->order_by('created_date', 'DESC');
           $query = $this->db->get('food')->result();
           return $query;
@@ -13,6 +14,7 @@
       
       public function display_meal_for_stew(){
           $this->db->where('category', 'Stew');
+          $this->db->where('stock', 'Yes');
           $this->db->order_by('created_date', 'DESC');
           $query = $this->db->get('food')->result();
           return $query;
@@ -20,6 +22,7 @@
       
       public function display_meal_for_vegan(){
           $this->db->where('category', 'Vegan');
+          $this->db->where('stock', 'Yes');
           $this->db->order_by('created_date', 'DESC');
           $query = $this->db->get('food')->result();
           return $query;
@@ -27,6 +30,7 @@
       
       public function display_meal_for_side(){
           $this->db->where('category', 'Side');
+          $this->db->where('stock', 'Yes');
           $this->db->order_by('created_date', 'DESC');
           $query = $this->db->get('food')->result();
           return $query;
@@ -34,6 +38,7 @@
       
       public function display_meal_for_dessert(){
           $this->db->where('category', 'Dessert');
+          $this->db->where('stock', 'Yes');
           $this->db->order_by('created_date', 'DESC');
           $query = $this->db->get('food')->result();
           return $query;
