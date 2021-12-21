@@ -562,16 +562,17 @@
           $delivery_end = $this->input->post('delivery_end');
           
           $days = $this->input->post('days');
-          $all = $this->input->post('all');
+          $all = $this->input->post('all');*/
           $stock = $this->input->post('stock');
           
-          $meal_voucher = $this->input->post('meal_voucher');*/
+          //$meal_voucher = $this->input->post('meal_voucher');
           
           $food_array = array(
             'title' => $str_title,
             'price' => $price,
             'type' => $type,
             'category' => $str_category,
+            'stock' => $stock
           );
 
           /*if(isset($all)){
@@ -759,6 +760,7 @@
           $price = $this->input->post('price');
           $type = $this->input->post('type');
           $category = $this->input->post('category');
+          $stock = $this->input->post('stock');
           /*$description = $this->input->post('description');
           $side_meal = $this->input->post('side_meal');
           $side_drink = $this->input->post('side_drink');*/
@@ -852,6 +854,7 @@
             'category' => $str_category,
             'image1' => $fileName1,
             'sold' => 0,
+            'stock' => $stock,
             'created_time' => $time,
             'created_date' => $date
           );
