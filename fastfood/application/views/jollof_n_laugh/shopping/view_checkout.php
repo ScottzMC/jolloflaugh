@@ -106,17 +106,9 @@
                                             <label>Seat Type <abbr class="required" title="required">*</abbr></label>
                                             <select class="form-control" name="seat_type">
                                                 <option>Select</option>
-                                                <option value="VIP">VIP</option>
-                                                <option value="Executive Table 1">Executive Table 1</option>
-                                                <option value="Executive Table 2">Executive Table 2</option>
-                                                <option value="Executive Table 3">Executive Table 3</option>
-                                                <option value="Executive Table 4">Executive Table 4</option>
-                                                <option value="Premuim Table 1">Premuim Table 1</option>
-                                                <option value="Premuim Table 2">Premuim Table 2</option>
-                                                <option value="Premuim Table 3">Premuim Table 3</option>
-                                                <option value="Premuim Table 4">Premuim Table 4</option>
-                                                <option value="Standard Seating">Standard Seating</option>
-                                                <option value="Standing">Standing</option>
+                                                <?php if(!empty($seating)){ foreach($seating as $seat){ ?>
+                                                <option value="<?php echo $seat->title; ?>"><?php echo $seat->title; ?></option>
+                                                <?php } } ?>
                                             </select>
                                             <span class="text-danger" style="color: red;"><?php echo form_error('seat_type'); ?></span>
                                         </div>
@@ -167,23 +159,59 @@
                                             </ul>
                                         </div>
                                         
-                                        <div class="your-order-info order-shipping">
+                                        <?php
+                                        $cart_total = $this->cart->total();
                                         
+                                        $query = $this->db->query("SELECT DISTINCT id, code, percent FROM temp_discount")->result(); 
+                                        foreach($query as $qry){
+                                            $current_voucher = $qry->code;
+                                            $voucher_id = $qry->id;
+                                            $current_voucher_percent = $qry->percent;
+                                        }
+                                        
+                                        $sequel = $this->db->query("SELECT DISTINCT code FROM discount")->result(); 
+                                        foreach($sequel as $sql){
+                                            $discount = $sql->code;
+                                        }
+                                        
+                                        ?>
+                                        
+
                                         <div class="your-order-info order-shipping">
                                             <ul>
-                                                <li>Total <p>£<?php echo $this->cart->total(); ?></p></li>
+                                                <?php if(!empty($query) && $current_voucher == $discount){ ?>
+                                                <?php $discount_price = $current_voucher_percent/100 * $cart_total; ?>
+                                                <li>Total (via voucher) <span>£<?php echo $this->cart->total() - $discount_price; ?></span></li>
+                                                <?php }else{ ?>
+                                                <li>Total <span>£<?php echo $this->cart->total(); ?></span></li>
+                                                <?php } ?>
                                             </ul>
                                         </div>
                                         
-                                    </div>
-                                    <div class="payment-method">
-                                        <div class="pay-top sin-payment">
-                                            <input id="payment-method-2" class="input-radio" type="radio" value="cheque" name="payment_method">
-                                            <label for="payment-method-2">Check payments</label>
-                                            <div class="payment-box payment_method_bacs">
-                                                <p>Make your payment directly into our bank account. Please use your Order ID as the payment reference.</p>
-                                            </div>
-                                        </div>
+                                    
+                                    <script>
+                                        function deleteVoucher(id){
+                                        var del_id = id;
+                                        if(confirm("Are you sure you want to remove this discount code")){
+                                        $.post('<?php echo base_url('jollof_n_laugh/destroy_voucher'); ?>', {"del_id": del_id}, function(data){
+                                          location.reload();
+                                          $('#cte').html(data)
+                                          });
+                                        }
+                                      }
+                                    </script>
+                                    <p id='cte'></p>
+                                    
+                                    <div class="your-order-info order-shipping">
+                                        <?php if(!empty($query)){ ?>
+                                        <ul>
+                                            <li><?php echo $current_voucher; ?> 
+                                                <p>
+                                                    <button type="button" onclick="deleteVoucher(<?php echo $voucher_id; ?>)" class="cart-btn-2">Remove Voucher</button> 
+                                                </p>
+                                            </li>
+                                        </ul>
+                                        <?php }else{ echo ''; } ?>
                                     </div>
                                 </div>
                                 <div class="Place-order">
