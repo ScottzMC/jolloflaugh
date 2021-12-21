@@ -67,13 +67,11 @@
                  );
         
                   $this->session->set_userdata($sess_data);
-                  $status = $this->session->userdata('ustatus'); 
-		  redirect('jollof_n_laugh');
-		  ?>
-                  <!--<script>
+                  $status = $this->session->userdata('ustatus'); ?>
+                  <script>
                       alert('Login successfully');
                       window.location.href="<?php echo site_url('jollof_n_laugh'); ?>";
-                  </script>-->
+                  </script> 
                   <?php
                   /*if(isset($_SERVER['HTTP_REFERER'])){
                     redirect($_SERVER['HTTP_REFERER']);
@@ -167,19 +165,15 @@
                 
                 $add_user = $this->Jollof_n_laugh_model->create_user($register_array);
 
-                if($add_user && $this->email->send()){ 
-		redirect('jollof_n_laugh/login');
-		?>
-                    <!--<script>
+                if($add_user && $this->email->send()){ ?>
+                    <script>
                         alert('Account has been created successfully. Please Activate your Account in your Inbox');
                         window.location.href="<?php echo site_url('jollof_n_laugh/login'); ?>";
-                    </script>-->
-          <?php }else{ 
-		redirect('jollof_n_laugh/register');
-		?>
-                   <!--<script>
+                    </script>
+          <?php }else{ ?>
+                   <script>
                         alert('Account has not been created');
-                    </script> -->
+                    </script> 
           <?php }
             }
         }
@@ -195,13 +189,11 @@
         
         public function activate_user($code){
             //$code = $_GET['code'];
-            $this->Jollof_n_laugh_model->activate_user($code); 
-	    redirect('jollof_n_laugh');
-	    ?>
-            <!--<script>
+            $this->Jollof_n_laugh_model->activate_user($code); ?>
+            <script>
                 alert('Activated Successfully');
                 window.location.href="<?php echo site_url('jollof_n_laugh'); ?>";
-            </script>-->
+            </script>
   <?php }
   
         public function forgot_password(){
@@ -248,20 +240,16 @@
              $this->email->subject("$subject");
              $this->email->message("$body");
     
-            if($this->email->send()){ 
-	    redirect('jollof_n_laugh/login');
-	    ?>
-            <!--<script>
+            if($this->email->send()){ ?>
+            <script>
                 alert('Mail sent successfully');
                 window.location.href="<?php echo base_url('jollof_n_laugh/login'); ?>";
-              </script>-->    
-            <?php }else{ 
-	    redirect('jollof_n_laugh/login');
-	    ?>
-                <!--<script>
+              </script>    
+            <?php }else{ ?>
+                <script>
                     alert("Email does not exist ");
                     window.location.href="<?php echo site_url('jollof_n_laugh/login'); ?>";
-                </script>-->
+                </script>
        <?php }
            }
       }
@@ -285,28 +273,22 @@
             
             $update_detail = $this->Jollof_n_laugh_model->update_user_password($query_email, $hashed_password);
     
-            if($update_detail){ 
-		redirect('jollof_n_laugh/login');
-	     ?>
-              <!--<script>
+            if($update_detail){ ?>
+              <script>
                 alert('Account updated successfully');
                 window.location.href="<?php echo base_url('jollof_n_laugh/login'); ?>";
-              </script>-->
-      <?php }else{ 
-		redirect('jollof_n_laugh/login');
-	   ?>
-              <!--<script>
+              </script> 
+      <?php }else{ ?>
+              <script>
                 alert('Reset Password Failed');
                 window.location.href="<?php echo base_url('jollof_n_laugh/login'); ?>";
-              </script>-->
+              </script> 
         <?php }
-           }else{ 
-	    redirect('jollof_n_laugh/login');
-	   ?>
-              <!--<script>
+           }else{ ?>
+              <script>
                 alert("Email does not exist");
                 window.location.href="<?php echo site_url('jollof_n_laugh/login'); ?>";
-              </script>-->
+              </script>
            <?php }
           }
          }
@@ -430,12 +412,15 @@
             'category' => $this->input->post('category'),
             'image' => $this->input->post('image')
           );
-	     
+    
          $this->cart->insert($insert_items);
-	 $statusMsg = '<p><div class="alert alert-success" style="text-align: center;">Added to cart <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-	 <span aria-hidden="true">&times;</span></button></div></p>';
-         $this->session->set_flashdata('status', $statusMsg);
-	 redirect('jollof_n_laugh');
+         ?>
+         <script>
+             alert('Added to Cart');
+             window.location.href="<?php echo site_url('jollof_n_laugh'); ?>";
+         </script> 
+         //redirect('jollof_n_laugh');
+         <?php
         }
     
         public function remove_cart($rowid){
@@ -482,19 +467,14 @@
                 );
                 $update = $this->cart->update($data);
             }
-	   redirect('jollof_n_laugh/view_cart');
-	                
+            
             // Return response
             echo $update?'ok':'err';
         }
         
         public function checkout(){
-          $email = $this->session->userdata('uemail');
-
-          //$data['users'] = $this->Jollof_n_laugh_model->display_my_account($email);
-
-
-		  
+          $data['seating'] = $this->Jollof_n_laugh_model->display_all_seating();
+          
 		  $this->load->view('jollof_n_laugh/shopping/view_checkout', $data);
         }
         
@@ -505,7 +485,7 @@
       
       //if(isset($submit_btn)){
           
-            $shuffle = str_shuffle("ABCDEFGHTUVXY");
+            $shuffle = str_shuffle("ABCDEFGH-TUVXY");
             $unique = rand(00110, 90099);
             $order_code = $shuffle.$unique;
             $firstname = $this->input->post('firstname');
@@ -542,21 +522,17 @@
             $order_details = $this->Jollof_n_laugh_model->insert_order_details($order_details_array);
             //$this->cart->destroy();
             
-            if($order_items){ 
-		redirect('jollof_n_laugh/make_order_payment/'.strtolower($order_code));
-	    ?>
-                <!--<script>
+            if($order_items){ ?>
+                <script>
                     //alert('Order Successfully');
                     window.location.href="<?php echo site_url('jollof_n_laugh/make_order_payment/'.strtolower($order_code)); ?>";
                     //window.location.href="<?php echo site_url('jollof_n_laugh'); ?>";
-                </script>-->
-      <?php }else{ 
-		redirect('jollof_n_laugh');
-	    ?>
-                <!--<script>
+                </script>
+      <?php }else{ ?>
+                <script>
                     alert('Could not process order');
                     window.location.href="<?php echo site_url('jollof_n_laugh'); ?>";
-                </script>-->
+                </script> 
     <?php } 
         //}
       }
@@ -571,6 +547,7 @@
           
            $data['menu'] = $this->Jollof_n_laugh_model->display_menu_options();
            $data['order_item'] = $this->Jollof_n_laugh_model->display_all_order_by_code($order_code);
+           
 
            $this->load->view('jollof_n_laugh/shopping/payment', $data);
 
@@ -582,27 +559,37 @@
     		$cart_total = $this->cart->total();
             
             \Stripe\Stripe::setApiKey($this->config->item('stripe_secret'));
-            \Stripe\Charge::create ([
+
+            $charge = \Stripe\Charge::create ([
                 "amount" => $cart_total * 100,
                 "currency" => "gbp",
                 "source" => $this->input->post('stripeToken'),
                 "description" => "Test payment from Fast Food" 
             ]);
             
+             $chargeID = $charge->id;
+            
              $order_id = $this->input->post('order_id');
              $title = $this->input->post('title');
              $price = $this->input->post('price');
              $quantity = $this->input->post('quantity'); 
              $email = $this->input->post('customer_email');
+             
+    		 $array = array(
+    		     'charge_id' => $chargeID
+    		 );
+    		 
+    		 $this->Jollof_n_laugh_model->update_stripe_charge($order_id, $array);
 
              $subject = "Order Notification";
-             
+
              if($cart = $this->cart->contents()):
     			foreach ($cart as $item):
     		 $title = $item['name'];
     		 $price = $item['price'];
     		 $qty = $item['qty'];
-
+    		 
+    		
              $body = "
                 Dear Customer, please find your ordered products and the current order status
                 Order Code - $order_id,
@@ -627,8 +614,7 @@
              $this->load->library('email', $config);
              //$this->load->library('encrypt');
              $this->email->from('admin@scottnnaghor.com', "FastFood Team");
-             //$this->email->to("$email");
-	     $this->email->to("scottphenix24@gmail.com");
+             $this->email->to("$email");
              //$this->email->cc("testcc@domainname.com");
              $this->email->subject("$subject");
              $this->email->message("$body");
@@ -640,13 +626,12 @@
              $this->cart->destroy();
 
             //$this->session->set_flashdata('success', 'Payment made successfully.');
-	    redirect('jollof_n_laugh/success/'.$order_id);
             ?>
             
-            <!--<script>
+            <script>
                 //alert('Order was successful');
-                window.location.href="<?php echo site_url('jollof_n_laugh/success'); ?>";
-            </script>-->
+                window.location.href="<?php echo site_url('jollof_n_laugh/success/'.$order_id); ?>";
+            </script>
     <?php }
     
         public function success($order_code){
@@ -677,7 +662,41 @@
             $this->Jollof_n_laugh_model->delete_message($did);
         }
         
-        // End of Shopping 
+        // End of Shopping
+        
+        // Discount 
+        
+        public function use_voucher(){
+            $discount = $this->input->post('discount');
+
+            $btn_submit = $this->input->post('submit');
+            
+            if(isset($btn_submit)){
+                
+                $voucher_array = array('code' => $discount, 'percent' => "10");
+                
+                $apply_voucher = $this->Jollof_n_laugh_model->add_temp_vouchers($voucher_array);
+                
+                if($apply_voucher && $discount == "datguydon"){ ?>
+                    <script>
+                        alert('Applied Voucher');
+                        window.location.href="<?php echo site_url('jollof_n_laugh/view_cart/'); ?>";
+                    </script>
+          <?php }else{ ?>
+                  <script>
+                    alert('Voucher was not added');
+                    window.location.href="<?php echo site_url('jollof_n_laugh/view_cart'); ?>";
+                  </script>
+         <?php }   
+            }
+        }
+        
+        public function destroy_voucher(){
+            $id = $this->input->post('del_id');
+            $this->Jollof_n_laugh_model->remove_voucher($id);
+        }
+        
+        // End of Discount 
     }
     
 ?>
