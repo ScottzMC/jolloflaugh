@@ -612,7 +612,7 @@
 
           $update_food = $this->Admin_model->update_food($id, $food_array);
 
-          if($update_food){ ?>
+          if($update_food){ redirect($_SERVER['HTTP_REFERER']); ?>
             <script>
                 alert('Updated Successfully');
                 window.location.href="<?php echo site_url('admin/view_food'); ?>";
@@ -914,7 +914,7 @@
 
           $insert_food = $this->Admin_model->insert_food($food_array);
 
-          if($insert_food){ ?>
+          if($insert_food){ redirect('admin/jollof_n_laugh'); ?>
             <script>
                 alert('Added Successfully');
                 window.location.href="<?php echo site_url('admin/view_food'); ?>";
