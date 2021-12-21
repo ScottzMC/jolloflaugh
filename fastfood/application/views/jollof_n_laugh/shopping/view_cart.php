@@ -56,8 +56,8 @@
           <script>
             // Update item quantity
             function updateCartItem(obj, rowid){
-                $.get("https://jollofnlaugh.com/fastfood/jollof_n_laugh/updateItemQty", {rowid:rowid, qty:obj.value}, function(resp){
-                    window.location.href="https://jollofnlaugh.com/fastfood/jollof_n_laugh/view_cart";
+                $.get("<?php echo base_url('jollof_n_laugh/updateItemQty'); ?>", {rowid:rowid, qty:obj.value}, function(resp){
+                    window.location.href="<?php echo site_url('jollof_n_laugh/view_cart'); ?>";
                     /*if(resp == 'ok'){
                         location.reload();
                     }else{
@@ -138,19 +138,91 @@
                                 </div>
                             </div>
                         </form>
+                        
                         <div class="row">
+                            
+                            <?php $meal_vouchers = $this->db->query("SELECT * FROM meal_voucher_details WHERE email = '$session_email' ")->result(); 
+                            $cart_total = $this->cart->total();
+
+                            foreach($meal_vouchers as $meal_vouch){}
+                            ?>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="discount-code-wrapper">
+                                    <div class="title-wrap">
+                                        <h4 class="cart-bottom-title section-bg-gray">Use Coupon Code</h4>
+                                    </div>
+                                    <?php if($meal_vouch->category == $item['category']){ ?>
+                                        <div class="alert alert-danger">Cannot use this voucher with a Meal Deal</div>
+                                    <?php }else{ ?>
+                                    <div class="discount-code">
+                                        <p>Enter your coupon code if you have one.</p>
+                                        <form action="<?php echo base_url('jollof_n_laugh/use_voucher'); ?>" method="POST">
+                                            <input type="text" name="discount" placeholder="Discount code">
+                                            <br><button type="submit" name="submit" class="cart-btn-2">Apply Coupon</button>
+                                        </form>
+                                    </div>
+                                    <?php } ?>
+                                </div>
+                            </div>
                             
                             <div class="col-lg-4 col-md-12">
                                 <div class="grand-totall">
                                     <div class="title-wrap">
                                         <h4 class="cart-bottom-title section-bg-gary-cart">Cart Total</h4>
                                     </div>
+                                    <?php
+                                    $cart_total = $this->cart->total();
+                                    
+                                    $query = $this->db->query("SELECT DISTINCT id, code, percent FROM temp_discount")->result(); 
+                                    foreach($query as $qry){
+                                        $current_voucher = $qry->code;
+                                        $voucher_id = $qry->id;
+                                        $current_voucher_percent = $qry->percent;
+                                    }
+                                    
+                                    $sequel = $this->db->query("SELECT DISTINCT code FROM discount")->result(); 
+                                    foreach($sequel as $sql){
+                                        $discount = $sql->code;
+                                    }
+                                    
+                                    ?>
+                                    <?php if(!empty($query) && $current_voucher == $discount){ ?>
+                                    <?php $discount_price = $current_voucher_percent/100 * $cart_total; ?>
+                                    <h5>Total (via voucher) <span>£<?php echo $this->cart->total() - $discount_price; ?></span></h5>
+                                    <?php }else{ ?>
                                     <h5>Total <span>£<?php echo $this->cart->total(); ?></span></h5>
+                                    <?php } ?>
                                     <a href="<?php echo site_url('jollof_n_laugh/checkout'); ?>">Proceed to Checkout</a>
                                 </div>
                             </div>
                             
+                            <script>
+                                function deleteVoucher(id){
+                                var del_id = id;
+                                if(confirm("Are you sure you want to remove this discount code")){
+                                $.post('<?php echo base_url('jollof_n_laugh/destroy_voucher'); ?>', {"del_id": del_id}, function(data){
+                                  location.reload();
+                                  $('#cte').html(data)
+                                  });
+                                }
+                              }
+                            </script>
+                            <p id='cte'></p>
+                            
+                            <div class="col-lg-4 col-md-12">
+                                <div class="grand-totall">
+                                    <div class="title-wrap">
+                                        <h4 class="cart-bottom-title section-bg-gary-cart">Voucher</h4>
+                                    </div>
+                                    <?php if(!empty($query)){ ?>
+                                    <h5><?php echo $current_voucher; ?></h5>
+                                    <button type="button" onclick="deleteVoucher(<?php echo $voucher_id; ?>)" class="cart-btn-2">Remove Voucher</button>
+                                    <?php }else{ echo ''; } ?>
+                                </div>
+                            </div>
+                            
                         </div>
+                        
                     </div>
                 </div>
             </div>
@@ -164,8 +236,7 @@
 ============================================ -->
 
     <script src="<?php echo base_url('assets/js/vendor/modernizr-3.6.0.min.js'); ?>"></script>
-    <!--<script src="< ?php echo base_url('assets/js/vendor/jquery-3.5.1.min.js'); ?>"></script>-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="<?php echo base_url('assets/js/vendor/jquery-3.5.1.min.js'); ?>"></script>
     <script src="<?php echo base_url('assets/js/vendor/jquery-migrate-3.3.0.min.js'); ?>"></script>
     <script src="<?php echo base_url('assets/js/vendor/bootstrap.bundle.min.js'); ?>"></script>
     <script src="<?php echo base_url('assets/js/plugins/slick.js'); ?>"></script>
