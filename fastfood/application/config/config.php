@@ -25,15 +25,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $config['base_url'] = 'https://jollofnlaugh.com/fastfood';
 
-//$config['stripe_key'] = 'pk_test_51H4X2nENqkbmUYd1Xxn4AJkg25RKJIcA5JsTCs4So7H59Ka2azFzPZ99cay6GtY1gS0JRV7mqUlGJQcOzvaKlsc600vKNsqJ4K';
-//$config['stripe_secret'] = 'sk_test_51H4X2nENqkbmUYd177DHyvFCqk9xYExtrDEb4dvAi7srC6QKITva9HrhDIqD0u2b3g6ysxPui726atmq7esW0fPH00yAufwihb';
-
-//$config['stripe_key'] = 'pk_live_51H4X2nENqkbmUYd1txxBcFVvqjE5BnhCoJOQqd308eHKo7Wj1uUroKgP591JKHHIC9pLp4YEtN4rXOb6U7ye1ETz00NfaDpz0p';
-//$config['stripe_secret'] = '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';
+$config['stripe_key'] = 'pk_test_51H4X2nENqkbmUYd1Xxn4AJkg25RKJIcA5JsTCs4So7H59Ka2azFzPZ99cay6GtY1gS0JRV7mqUlGJQcOzvaKlsc600vKNsqJ4K';
+$config['stripe_secret'] = 'sk_test_51H4X2nENqkbmUYd177DHyvFCqk9xYExtrDEb4dvAi7srC6QKITva9HrhDIqD0u2b3g6ysxPui726atmq7esW0fPH00yAufwihb';
 
 // Jollof N Laugh
-$config['stripe_key'] = 'pk_live_51JlAEWC26O1rh9i1H8yCf8UyeTsGfYDVBA6DVGWvKIUUZtth7Zp2nH8GDEOdWuOXLdPxRMZPJeBnFQG4yg9CsCJK00UL9XOyIn';
-$config['stripe_secret'] = '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';
+//$config['stripe_key'] = 'pk_live_51JlAEWC26O1rh9i1H8yCf8UyeTsGfYDVBA6DVGWvKIUUZtth7Zp2nH8GDEOdWuOXLdPxRMZPJeBnFQG4yg9CsCJK00UL9XOyIn';
+//$config['stripe_secret'] = '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';
 
 /*
 |--------------------------------------------------------------------------
