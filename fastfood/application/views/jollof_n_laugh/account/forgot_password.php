@@ -46,7 +46,7 @@
                 <div class="breadcrumb-content text-center">
                     <ul>
                         <li>
-                            <a href="<?php echo site_url('home'); ?>">Home</a>
+                            <a href="<?php echo site_url('jollof_n_laugh'); ?>">Home</a>
                         </li>
                         <li class="active">Forgot Password </li>
                     </ul>
@@ -68,12 +68,12 @@
                                 <div id="lg1" class="tab-pane active">
                                     <div class="login-form-container">
                                         <div class="login-register-form">
-                                            <form action="<?php echo base_url('account/forgot_password'); ?>" method="post">
+                                            <form action="<?php echo base_url('jollof_n_laugh/forgot_password'); ?>" method="post">
                                                 <input type="email" name="email" placeholder="Email Address">
    					                            <span class="text-danger" style="color: red;"><?php echo form_error('email'); ?></span>
                                                 <div class="button-box">
                                                     <div class="login-toggle-btn">
-                                                        <a href="<?php echo site_url('account/register'); ?>">Do not have an account?</a>
+                                                        <a href="<?php echo site_url('jollof_n_laugh/register'); ?>">Do not have an account?</a>
                                                     </div>
                                                     <button type="submit" name="forgot">Send</button>
                                                 </div>
