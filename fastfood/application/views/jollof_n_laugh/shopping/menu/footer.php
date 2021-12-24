@@ -22,7 +22,6 @@
                                 <nav>
                                     <ul>
                                         <!--<li><a class="active" href="<?php echo site_url('home'); ?>">HOME </a></li>-->
-                                        <li><a href="<?php echo site_url('food/all'); ?>">Food </a></li>
                                         <?php if($this->session->userdata('urole') == 'Admin'){ ?>
                                         <li><a style="font-size: 16px;" href="<?php echo site_url('admin/dashboard'); ?>">Admin</a></li>
                                         <li><a style="font-size: 16px;" href="<?php echo site_url('jollof_n_laugh/logout'); ?>">Logout </a></li>
