@@ -38,11 +38,11 @@
                  );
         
                   $this->session->set_userdata($sess_data);
-                  $status = $this->session->userdata('ustatus'); ?>
-                  <script>
+                  $status = $this->session->userdata('ustatus'); redirect('home'); ?>
+                  <!--<script>
                       alert('Login successfully');
                       window.location.href="<?php echo site_url('home'); ?>";
-                  </script> 
+                  </script> -->
                   <?php
                   /*if(isset($_SERVER['HTTP_REFERER'])){
                     redirect($_SERVER['HTTP_REFERER']);
@@ -137,15 +137,15 @@
                 $add_user = $this->Data_model->create_user($register_array);
                 $add_scheduler = $this->Data_model->create_scheduler($array);
                 
-                if($add_user && $add_scheduler && $this->email->send()){ ?>
-                    <script>
+                if($add_user && $add_scheduler && $this->email->send()){ redirect('account/login'); ?>
+                    <!--<script>
                         alert('Account has been created successfully. Please Activate your Account in your Inbox');
                         window.location.href="<?php echo site_url('account/login'); ?>";
-                    </script>
-          <?php }else{ ?>
-                   <script>
+                    </script>-->
+          <?php }else{ redirect('account/register'); ?>
+                   <!--<script>
                         alert('Account has not been created');
-                    </script> 
+                    </script> -->
           <?php }
             }
         }
@@ -161,12 +161,11 @@
         
         public function activate_user($code){
             //$code = $_GET['code'];
-            $this->Data_model->activate_user($code); ?>
-            <script>
+            $this->Data_model->activate_user($code);  redirect('home'); ?>
+            <!--<script>
                 alert('Activated Successfully');
                 window.location.href="<?php echo site_url('account/login'); ?>";
-            </script>
-            //redirect('account/login');
+            </script>-->
   <?php }
   
         public function forgot_password(){
@@ -213,16 +212,16 @@
              $this->email->subject("$subject");
              $this->email->message("$body");
     
-            if($this->email->send()){ ?>
-            <script>
+            if($this->email->send()){ redirect('account/login'); ?>
+           <1-- <script>
                 alert('Mail sent successfully');
                 window.location.href="<?php echo base_url('account/login'); ?>";
-              </script>    
-            <?php }else{ ?>
-                <script>
+              </script>   --> 
+            <?php }else{  redirect('account/login'); ?>
+                <!--<script>
                     alert("Email does not exist ");
                     window.location.href="<?php echo site_url('account/login'); ?>";
-                </script>
+                </script>-->
        <?php }
            }
       }
@@ -246,22 +245,22 @@
             
             $update_detail = $this->Data_model->update_user_password($query_email, $hashed_password);
     
-            if($update_detail){ ?>
-              <script>
+            if($update_detail){ redirect('account/login'); ?>
+              <!--<script>
                 alert('Account updated successfully');
                 window.location.href="<?php echo base_url('account/login'); ?>";
-              </script> 
-      <?php }else{ ?>
-              <script>
+              </script> -->
+      <?php }else{ redirect('account/login'); ?>
+              <!--<script>
                 alert('Reset Password Failed');
                 window.location.href="<?php echo base_url('account/login'); ?>";
-              </script> 
+              </script> -->
         <?php }
-           }else{ ?>
-              <script>
+           }else{ redirect('account/login'); ?>
+              <!--<script>
                 alert("Email does not exist");
                 window.location.href="<?php echo site_url('account/login'); ?>";
-              </script>
+              </script>-->
            <?php }
           }
          }
