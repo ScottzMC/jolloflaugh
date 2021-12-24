@@ -211,7 +211,7 @@
             $email = $this->input->post('email');
             $submit = $this->input->post('forgot');
             
-            $this->load->view('site/account/forgot_password', $data);
+            $this->load->view('jollof_n_laugh/account/forgot_password', $data);
             
             $query = $this->db->query("SELECT email FROM users WHERE email = '$email' ")->result();
               foreach($query as $qry){
@@ -242,7 +242,8 @@
     
              $this->load->library('email', $config);
              //$this->load->library('encrypt');
-             $this->email->from('admin@scottnnaghor.com', "FastFood Team");
+             //$this->email->from('admin@scottnnaghor.com', "FastFood Team");
+	     $this->email->from('orders@afriquedelick.com', "Jollof N Laugh");
              $this->email->to("$email");
              //$this->email->cc("testcc@domainname.com");
              $this->email->subject("$subject");
