@@ -68,7 +68,7 @@
         
                   $this->session->set_userdata($sess_data);
                   $status = $this->session->userdata('ustatus'); 
-		  redirect('home');
+		  redirect('jollof_n_laugh');
 		?>
                   <!-- <script>
                       alert('Login successfully');
@@ -258,10 +258,10 @@
             <?php }else{ 
   	     redirect('jollof_n_laugh/login');
 	    ?>
-                <script>
+               <!-- <script>
                     alert("Email does not exist ");
                     window.location.href="<?php echo site_url('jollof_n_laugh/login'); ?>";
-                </script>
+                </script>-->
        <?php }
            }
       }
