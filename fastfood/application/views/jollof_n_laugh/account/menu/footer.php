@@ -4,15 +4,7 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="contact-info-wrap">
                             <div class="footer-logo">
-                                <a href="#"><img src="<?php echo base_url('assets/images/logo/logo.png'); ?>" alt="logo"></a>
-                            </div>
-                            <div class="single-contact-info">
-                                <span>Our Location</span>
-                                <p>869 General Village Apt. MX1 I99, Manchester, UK</p>
-                            </div>
-                            <div class="single-contact-info">
-                                <span>24/7 hotline:</span>
-                                <p>07445 9034 993</p>
+                                <a href="#"><img src="<?php echo base_url('assets/images/logo/logo-vr.png'); ?>" alt="logo"></a>
                             </div>
                         </div>
                     </div>
