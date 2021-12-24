@@ -39,11 +39,6 @@
     <div class="fixed-sidebar-left">
       <ul class="nav navbar-nav side-nav nicescroll-bar">
         <li>
-          <a href="<?php echo site_url('home'); ?>">
-            <i class="icon-grid mr-10"></i>Back To Shop
-          </a>
-        </li>
-        <li>
           <a class="" href="<?php echo site_url('admin/dashboard'); ?>">
             <i class="icon-picture mr-10"></i>Dashboard
           </a>
