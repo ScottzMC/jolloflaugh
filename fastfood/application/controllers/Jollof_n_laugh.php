@@ -414,12 +414,12 @@
           );
     
          $this->cart->insert($insert_items);
+	 redirect('jollof_n_laugh');
          ?>
          <!--<script>
              alert('Added to Cart');
              window.location.href="< ?php echo site_url('jollof_n_laugh'); ?>";
          </script> -->
-         redirect('jollof_n_laugh');
          <?php
         }
     
