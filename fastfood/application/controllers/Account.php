@@ -38,7 +38,7 @@
                  );
         
                   $this->session->set_userdata($sess_data);
-                  $status = $this->session->userdata('ustatus'); redirect('home'); ?>
+                  $status = $this->session->userdata('ustatus'); redirect('jollof_n_laugh/home'); ?>
                   <!--<script>
                       alert('Login successfully');
                       window.location.href="<?php echo site_url('home'); ?>";
@@ -156,12 +156,12 @@
           $this->session->unset_userdata($data);
           $this->session->sess_destroy();
           #delete_cookie('remember_me_token', 'http://localhost/ClientProjects/Soup', '/');
-          redirect('home');
+          redirect('jollof_n_laugh/home');
         }
         
         public function activate_user($code){
             //$code = $_GET['code'];
-            $this->Data_model->activate_user($code);  redirect('home'); ?>
+            $this->Data_model->activate_user($code);  redirect('jollof_n_laugh/home'); ?>
             <!--<script>
                 alert('Activated Successfully');
                 window.location.href="<?php echo site_url('account/login'); ?>";
