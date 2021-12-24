@@ -231,10 +231,10 @@
     
               $config = Array(
                  'protocol' => 'smtp',
-                 'smtp_host' => 'smtp.scottnnaghor.com',
+                 'smtp_host' => 'smtp.jollofnlaugh.com',
                  'smtp_port' => 25,
-                 'smtp_user' => 'admin@scottnnaghor.com', // change it to account email
-                 'smtp_pass' => 'TigerPhenix100', // change it to account email password
+                 'smtp_user' => 'orders@afriquedelick.com', // change it to account email
+                 'smtp_pass' => 'Afrique@2021', // change it to account email password
                  'mailtype' => 'html',
                  'charset' => 'iso-8859-1',
                  'wordwrap' => TRUE
