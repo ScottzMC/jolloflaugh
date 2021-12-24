@@ -231,10 +231,10 @@
     
               $config = Array(
                  'protocol' => 'smtp',
-                 'smtp_host' => 'smtp.jollofnlaugh.com',
+                 'smtp_host' => 'smtp.scottnnaghor.com',
                  'smtp_port' => 25,
-                 'smtp_user' => 'orders@afriquedelick.com', // change it to account email
-                 'smtp_pass' => 'Afrique@2021', // change it to account email password
+                 'smtp_user' => 'admin@scottnnaghor.com', // change it to account email
+                 'smtp_pass' => 'TigerPhenix100', // change it to account email password
                  'mailtype' => 'html',
                  'charset' => 'iso-8859-1',
                  'wordwrap' => TRUE
@@ -242,8 +242,8 @@
     
              $this->load->library('email', $config);
              //$this->load->library('encrypt');
-             //$this->email->from('admin@scottnnaghor.com', "FastFood Team");
-	     $this->email->from('orders@afriquedelick.com', "Jollof N Laugh");
+             $this->email->from('admin@scottnnaghor.com', "FastFood Team");
+	     //$this->email->from('orders@afriquedelick.com', "Jollof N Laugh");
              $this->email->to("$email");
              //$this->email->cc("testcc@domainname.com");
              $this->email->subject("$subject");
