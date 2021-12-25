@@ -109,6 +109,7 @@
             exit ("the application environment is not set correctly.");
         }
     }
+  }
 
 /*
  *---------------------------------------------------------------
