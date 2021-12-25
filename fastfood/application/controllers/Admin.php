@@ -2217,11 +2217,14 @@
             $add = array('title' => $title);
             $insert = $this->Admin_model->insert_seating($add);
     
-            if($insert){ ?>
-              <script>
+            if($insert){ echo '<script type="text/javascript">
+         alert("Added");
+         window.location.href = "'.$_SERVER['HTTP_REFERER'].'"; ; 
+         </script>'; ?>
+              <!--<script>
                   alert('Added Successfully');
                   window.location.href="<?php echo site_url('admin/seating'); ?>";
-              </script>
+              </script>-->
       <?php }else{
               $statusMsg = '<div class="alert alert-danger" role="alert">Error!!. Try Again</div>';
               $this->session->set_flashdata('msgMenuError', $statusMsg);
