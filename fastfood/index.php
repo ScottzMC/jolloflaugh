@@ -53,8 +53,8 @@
  *
  * NOTE: If you change these, also change the error_reporting() code below
  */
-	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development'); // Show error
-	//define ("environment", "production"); // default is development and not show error
+	//define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development'); // Show error
+	define ("environment", "production"); // default is development and not show error
 
 /*
  *---------------------------------------------------------------
@@ -68,7 +68,7 @@
  // Show error
  
     switch (ENVIRONMENT){
-    	case 'development':
+    	/*case 'development':
     		error_reporting(-1);
     		ini_set('display_errors', 1);
     	break;
@@ -90,10 +90,10 @@
     		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
     		echo 'The application environment is not set correctly.';
     		exit(1); // EXIT_ERROR
-    //}
+    }*/
 
     // Not show error
-    /*if (defined ("environment")){
+    if (defined ("environment")){
         switch (environment){
             case "development":
                 error_reporting (e_all);
@@ -107,7 +107,7 @@
         
         default:
             exit ("the application environment is not set correctly.");
-        }*/
+        }
     }
 
 /*
