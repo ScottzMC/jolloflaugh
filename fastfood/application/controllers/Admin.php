@@ -224,7 +224,7 @@
                 window.location.href="<?php echo site_url('admin/view_food'); ?>";
             </script>
       <?php
-          }else{
+          }else{ redirect('admin/jollof_n_laugh');
             $msgError = '<div class="alert alert-danger>Upload Failed</div>';
             $this->session->set_flashdata('msgError', $msgError); ?>
             <script>
@@ -317,18 +317,18 @@
           $update_image4 = $this->Admin_model->update_food_image4($id, $fileName4);
           $update_image5 = $this->Admin_model->update_food_image5($id, $fileName5);*/
 
-          if($update_image1 /* || $update_image2 || $update_image3 || $update_image4 || $update_image5*/){ ?>
-            <script>
+          if($update_image1 /* || $update_image2 || $update_image3 || $update_image4 || $update_image5*/){ redirect('admin/jollof_n_laugh'); ?>
+            <!--<script>
                 alert('Updated Successfully');
                 window.location.href="<?php echo site_url('admin/view_food'); ?>";
-            </script>
+            </script>-->
       <?php
-          }else{
+          }else{ redirect('admin/jollof_n_laugh');
             $msgError = '<div class="alert alert-danger>Upload Failed</div>';
             $this->session->set_flashdata('msgError', $msgError); ?>
-            <script>
+            <!--<script>
                 alert('Update Failed');
-            </script>
+            </script>-->
       <?php $this->load->view('admin/menu/nav');
             $this->load->view('admin/food/edit', $data);
             $this->load->view('admin/menu/footer');
@@ -521,16 +521,16 @@
           $insert_food = $this->Admin_model->insert_food($food_array);
 
           if($insert_food){ redirect('admin/jollof_n_laugh'); ?>
-            <script>
+            <!--<script>
                 alert('Added Successfully');
                 window.location.href="<?php echo site_url('admin/view_food'); ?>";
-            </script>
+            </script>-->
     <?php }else{
             $msgError = '<div class="alert alert-danger>Upload Failed</div>';
             $this->session->set_flashdata('msgError', $msgError); ?>
-            <script>
+            <!--<script>
                 alert('Food Failed');
-            </script>
+            </script>-->
       <?php $this->load->view('admin/menu/nav');
             $this->load->view('admin/food/add', $data);
             $this->load->view('admin/menu/footer');
@@ -651,12 +651,13 @@
          $this->email->message("$body");
          $this->email->send();
           
+         redirect('admin/delivering');
         ?>
           
-          <script>
+          <!--<script>
             alert('Order is now delivering');
             window.location.href="<?php echo site_url('admin/dashboard'); ?>";
-          </script> 
+          </script> -->
   <?php }
   
         if(isset($btn_delivered)){
@@ -691,13 +692,13 @@
          $this->email->subject("$subject");
          $this->email->message("$body");
          $this->email->send();
-          
+         redirect('admin/delivered');
         ?>
           
-          <script>
+          <!--<script>
             alert('Order is now delivered');
             window.location.href="<?php echo site_url('admin/dashboard'); ?>";
-          </script> 
+          </script> -->
   <?php }
   
         if(isset($btn_cancelled)){
@@ -732,13 +733,13 @@
          $this->email->subject("$subject");
          $this->email->message("$body");
          $this->email->send();
-          
+         redirect('admin/cancelled');
         ?>
           
-          <script>
+         <!-- <script>
             alert('Order is has been cancelled');
             window.location.href="<?php echo site_url('admin/dashboard'); ?>";
-          </script> 
+          </script> -->
   <?php }
 
         $this->load->view('admin/menu/nav');
@@ -798,13 +799,13 @@
          $this->email->subject("$subject");
          $this->email->message("$body");
          $this->email->send();
-          
+         redirect('admin/delivering'); 
         ?>
           
-          <script>
+         <!-- <script>
             alert('Order is now delivered');
             window.location.href="<?php echo site_url('admin/dashboard'); ?>";
-          </script> 
+          </script> -->
   <?php }
   
         if(isset($btn_cancelled)){
@@ -839,13 +840,13 @@
          $this->email->subject("$subject");
          $this->email->message("$body");
          $this->email->send();
-          
+         redirect('admin/cancelled'); 
         ?>
           
-          <script>
+         <!-- <script>
             alert('Order is has been cancelled');
             window.location.href="<?php echo site_url('admin/dashboard'); ?>";
-          </script> 
+          </script> -->
   <?php }
 
         $this->load->view('admin/menu/nav');
@@ -904,13 +905,13 @@
          $this->email->subject("$subject");
          $this->email->message("$body");
          $this->email->send();
-          
+         redirect('admin/delivered'); 
         ?>
           
-          <script>
+         <!-- <script>
             alert('Order is has been cancelled');
             window.location.href="<?php echo site_url('admin/dashboard'); ?>";
-          </script> 
+          </script> -->
   <?php }
 
         $this->load->view('admin/menu/nav');
@@ -978,11 +979,12 @@
         $array = array('status' => 'Refunded');
         
         $this->Admin_model->update_order_items_to_refund($charge_id, $array);
+        redirect('admin/refunded');
         ?>
-        <script>
+        <!--<script>
             alert("Refunded");
             window.location.href="<?php echo site_url('admin/refunded'); ?>";
-        </script>
+        </script>-->
         <?php
         //redirect($_SERVER['HTTP_REFERER']);
    }
@@ -1117,17 +1119,17 @@
 
           $insert_voucher = $this->Admin_model->insert_voucher($voucher_array);
 
-          if($insert_voucher){ ?>
-            <script>
+          if($insert_voucher){ redirect('admin/view_voucher'); ?>
+            <!--<script>
                 alert('Added Successfully');
                 window.location.href="<?php echo site_url('admin/view_voucher'); ?>";
-            </script>
-    <?php }else{
+            </script>-->
+    <?php }else{ redirect('admin/view_voucher');
             $msgError = '<div class="alert alert-danger>Upload Failed</div>';
             $this->session->set_flashdata('msgError', $msgError); ?>
-            <script>
+            <!--<script>
                 alert('Upload Failed');
-            </script>
+            </script>-->
       <?php $this->load->view('admin/menu/nav');
             $this->load->view('admin/voucher/add', $data);
             $this->load->view('admin/menu/footer');
@@ -1189,18 +1191,18 @@
 
           $update_voucher = $this->Admin_model->update_voucher($id, $voucher_array);
 
-          if($update_voucher){ ?>
-            <script>
+          if($update_voucher){ redirect('admin/view_voucher'); ?>
+            <!--<script>
                 alert('Updated Successfully');
                 window.location.href="<?php echo site_url('admin/view_voucher'); ?>";
-            </script>
+            </script>-->
       <?php
           }else{
             $msgError = '<div class="alert alert-danger>Upload Failed</div>';
-            $this->session->set_flashdata('msgError', $msgError); ?>
-            <script>
+            $this->session->set_flashdata('msgError', $msgError); redirect('admin/view_voucher'); ?>
+            <!--<script>
                 alert('Update Failed');
-            </script>
+            </script>-->
       <?php $this->load->view('admin/menu/nav');
             $this->load->view('admin/voucher/edit', $data);
             $this->load->view('admin/menu/footer');
@@ -1255,12 +1257,13 @@
     
             $add = array('title' => $title);
             $insert = $this->Admin_model->insert_seating($add);
+            redirect('admin/seating');
     
             if($insert){?>
-              <script>
+              <!--<script>
                   alert('Added Successfully');
                   window.location.href="<?php echo site_url('admin/seating'); ?>";
-              </script>
+              </script>-->
       <?php }else{
               $statusMsg = '<div class="alert alert-danger" role="alert">Error!!. Try Again</div>';
               $this->session->set_flashdata('msgMenuError', $statusMsg);
@@ -1289,12 +1292,12 @@
 
             $update = $this->Admin_model->update_seating($id, $title);
     
-            if($update){
+            if($update){ redirect('admin/seating');
               ?>
-              <script>
+              <!--<script>
                   alert('Edited Successfully');
                   window.location.href="<?php echo site_url('admin/seating'); ?>";
-              </script>
+              </script>-->
       <?php }else{
               $statusMsg = '<div class="alert alert-danger" role="alert">Error!!. Try Again</div>';
               $this->session->set_flashdata('msgEditError', $statusMsg);
