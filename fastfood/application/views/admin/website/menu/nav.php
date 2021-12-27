@@ -39,7 +39,7 @@
     <div class="fixed-sidebar-left">
       <ul class="nav navbar-nav side-nav nicescroll-bar">
         <li>
-          <a class="" href="<?php echo site_url('admin/dashboard'); ?>">
+          <a class="#" href="<?php echo site_url('admin/dashboard'); ?>">
             <i class="icon-picture mr-10"></i>Dashboard
           </a>
         </li>
@@ -66,23 +66,6 @@
         
         <li>
           <a href="javascript:void(0);" data-toggle="collapse" data-target="#vouc_dr">
-            <i class="icon-grid mr-10"></i>Meal Vouchers
-            <span class="pull-right">
-              <i class="fa fa-fw fa-angle-down"></i>
-            </span>
-          </a>
-          <ul id="vouc_dr" class="collapse collapse-level-1">
-            <li>
-              <a href="<?php echo site_url('admin/view_meal_voucher'); ?>">View</a>
-            </li>
-            <li>
-              <a href="<?php echo site_url('admin/add_meal_voucher'); ?>">Add</a>
-            </li>
-          </ul>
-        </li>
-        
-        <li>
-          <a href="javascript:void(0);" data-toggle="collapse" data-target="#vouc_dr">
             <i class="icon-grid mr-10"></i>Vouchers
             <span class="pull-right">
               <i class="fa fa-fw fa-angle-down"></i>
@@ -97,26 +80,6 @@
             </li>
           </ul>
         </li>
-        
-        <li>
-          <a href="javascript:void(0);" data-toggle="collapse" data-target="#comp_dr">
-            <i class="icon-grid mr-10"></i>Company
-            <span class="pull-right">
-              <i class="fa fa-fw fa-angle-down"></i>
-            </span>
-          </a>
-          <ul id="comp_dr" class="collapse collapse-level-1">
-            <li>
-              <a href="<?php echo site_url('admin/view_company_address'); ?>">Delivery Address</a>
-            </li>
-            <li>
-              <a href="<?php echo site_url('admin/view_company'); ?>">View</a>
-            </li>
-            <li>
-              <a href="<?php echo site_url('admin/add_company'); ?>">Add</a>
-            </li>
-          </ul>
-        </li>
 
         <li>
           <a href="javascript:void(0);" data-toggle="collapse" data-target="#edit_dr">
@@ -127,24 +90,15 @@
           </a>
           <ul id="edit_dr" class="collapse collapse-level-1">
             <li>
-              <a href="<?php echo site_url('admin/menu'); ?>">Edit Menu</a>
-            </li>
-            <li>
-              <a href="<?php echo site_url('admin/banner'); ?>">Edit Banners</a>
-            </li>
-            <li>
               <a href="<?php echo site_url('admin/slider'); ?>">Edit Sliders</a>
-            </li>
-            <li>
-              <a href="<?php echo site_url('admin/side_meal'); ?>">Edit Side Meal</a>
-            </li>
-            <li>
-              <a href="<?php echo site_url('admin/side_drink'); ?>">Edit Side Drink</a>
             </li>
             <li>
               <a href="<?php echo site_url('admin/seating'); ?>">Edit Seating</a>
             </li>
             <!--<li>
+              <a href="<?php echo site_url('admin/edit/about'); ?>">Edit About Us</a>
+            </li>
+            <li>
               <a href="<?php echo site_url('admin/edit/faq'); ?>">Edit FAQ</a>
             </li>
             <li>
@@ -162,7 +116,7 @@
           </ul>
         </li>
         
-         <li>
+        <li>
           <a href="javascript:void(0);" data-toggle="collapse" data-target="#order_dr">
             <i class="icon-grid mr-10"></i>Orders
             <span class="pull-right">
@@ -186,24 +140,6 @@
               <a href="<?php echo site_url('admin/refunded'); ?>">Refunded Orders</a>
             </li>
           </ul>
-        </li>
-        
-        <!--<li>
-          <a href="<?php echo site_url('admin/message_grid'); ?>">
-            <i class="icon-grid mr-10"></i>Message Grid
-          </a>
-        </li>-->
-
-        <li>
-          <a href="<?php echo site_url('admin/user_grid'); ?>">
-            <i class="icon-grid mr-10"></i>User Grid
-          </a>
-        </li>
-        
-        <li>
-          <a href="<?php echo site_url('admin/staff_grid'); ?>">
-            <i class="icon-grid mr-10"></i>Staff Grid
-          </a>
         </li>
 
         <li>
